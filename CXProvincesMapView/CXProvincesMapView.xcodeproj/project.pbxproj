@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC5D89D6226B725700F16B77 /* SwiftLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */; };
 		DC70E7E82264E0D000BBC128 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7E72264E0D000BBC128 /* AppDelegate.m */; };
 		DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7EA2264E0D000BBC128 /* ViewController.m */; };
 		DC70E7EE2264E0D000BBC128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC70E7EC2264E0D000BBC128 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC5D89D4226B725700F16B77 /* SwiftLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLaunchView.h; sourceTree = "<group>"; };
+		DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLaunchView.m; sourceTree = "<group>"; };
 		DC70E7E32264E0D000BBC128 /* CXProvincesMapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXProvincesMapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC70E7E62264E0D000BBC128 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC70E7E72264E0D000BBC128 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				DC70E7E72264E0D000BBC128 /* AppDelegate.m */,
 				DC70E7E92264E0D000BBC128 /* ViewController.h */,
 				DC70E7EA2264E0D000BBC128 /* ViewController.m */,
+				DC5D89D4226B725700F16B77 /* SwiftLaunchView.h */,
+				DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */,
 				DC70E7EC2264E0D000BBC128 /* Main.storyboard */,
 				DC70E7EF2264E0D100BBC128 /* Assets.xcassets */,
 				DC70E7F12264E0D100BBC128 /* LaunchScreen.storyboard */,
@@ -144,6 +149,7 @@
 				DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */,
 				DC70E7F62264E0D100BBC128 /* main.m in Sources */,
 				DC70E7E82264E0D000BBC128 /* AppDelegate.m in Sources */,
+				DC5D89D6226B725700F16B77 /* SwiftLaunchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
