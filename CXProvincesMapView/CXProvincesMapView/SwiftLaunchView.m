@@ -16,6 +16,35 @@
 
 @implementation SwiftLaunchView
 
++ (void)launchAnimation {
+    //获取到LaunchScreen控制器(不要忘记id)
+    UIViewController *launchScreenController = [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchScreen"];
+    
+    //获取LaunchScreen的view
+    UIView *launchView = launchScreenController.view;
+    UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+    launchView.frame = [UIApplication sharedApplication].keyWindow.frame;
+    [mainWindow addSubview:launchView];
+    
+    //添加launchView类
+    SwiftLaunchView *swiftLaunchView = [[SwiftLaunchView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [launchView addSubview:swiftLaunchView];
+    //最后移除
+    [UIView animateWithDuration:0.5f delay:2.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        launchView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [launchView removeFromSuperview];
+    }];
+    
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self addLayerToLaunchView];
+    }
+    return self;
+}
+
 - (void)addLayerToLaunchView {
     //添加launchView
     self.launchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 150, 150)];

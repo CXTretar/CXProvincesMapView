@@ -1,8 +1,8 @@
 //
-//  SwiftLaunchView.h
+//  SampleMapController.h
 //  CXProvincesMapView
 //
-//  Created by Felix on 2019/4/20.
+//  Created by Felix on 2019/4/22.
 //  Copyright © 2019 CXTretar. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SwiftLaunchView : UIView
-
-+ (void)launchAnimation;
+@interface SampleMapController : UIViewController
 
 @end
 
