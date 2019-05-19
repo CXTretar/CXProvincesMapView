@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC553C462291AFC700D6B551 /* ChinaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC553C452291AFC700D6B551 /* ChinaMapView.m */; };
 		DC5D89D6226B725700F16B77 /* SwiftLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */; };
 		DC70E7E82264E0D000BBC128 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7E72264E0D000BBC128 /* AppDelegate.m */; };
 		DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7EA2264E0D000BBC128 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC553C442291AFC700D6B551 /* ChinaMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChinaMapView.h; sourceTree = "<group>"; };
+		DC553C452291AFC700D6B551 /* ChinaMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChinaMapView.m; sourceTree = "<group>"; };
 		DC5D89D4226B725700F16B77 /* SwiftLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLaunchView.h; sourceTree = "<group>"; };
 		DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLaunchView.m; sourceTree = "<group>"; };
 		DC70E7E32264E0D000BBC128 /* CXProvincesMapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXProvincesMapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +101,8 @@
 				DCAE7359227756AF002C1B7F /* StyleKitName.m */,
 				DCAE735622774AF9002C1B7F /* ChinaMapPath.h */,
 				DCAE735722774AF9002C1B7F /* ChinaMapPath.m */,
+				DC553C442291AFC700D6B551 /* ChinaMapView.h */,
+				DC553C452291AFC700D6B551 /* ChinaMapView.m */,
 			);
 			path = resourse;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			files = (
 				DCAE735822774AF9002C1B7F /* ChinaMapPath.m in Sources */,
 				DCE8380C226E14DC0067AC93 /* CXProvincesMapView.m in Sources */,
+				DC553C462291AFC700D6B551 /* ChinaMapView.m in Sources */,
 				DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */,
 				DCAE735B227756AF002C1B7F /* StyleKitName.m in Sources */,
 				DC70E7F62264E0D100BBC128 /* main.m in Sources */,

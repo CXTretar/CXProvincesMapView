@@ -22,7 +22,7 @@
     self.title = @"SampleMapController";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    CXProvincesMapView *mapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width,self.view.bounds.size.width* 569 / 774)];
+    CXProvincesMapView *mapView = [[CXProvincesMapView alloc]initWithFrame:self.view.bounds];
     mapView.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:mapView];
 }
