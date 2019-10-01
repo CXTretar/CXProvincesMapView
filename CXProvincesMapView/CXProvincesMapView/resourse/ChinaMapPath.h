@@ -6,12 +6,14 @@
 //  Copyright © 2019 CXTretar. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import <UIKit/UIKit.h>
 
 @interface ChinaMapPath : NSObject
 
+@property(nonatomic, copy) NSArray *pathArray;
+@property(nonatomic, copy) NSMutableArray *textArray;
+@property(nonatomic, copy) NSArray *textRectArray;
+
+
 @end
 
-NS_ASSUME_NONNULL_END

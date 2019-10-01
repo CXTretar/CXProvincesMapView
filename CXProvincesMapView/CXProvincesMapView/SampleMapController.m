@@ -22,9 +22,15 @@
     self.title = @"SampleMapController";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    CXProvincesMapView *mapView = [[CXProvincesMapView alloc]initWithFrame:self.view.bounds];
-    mapView.backgroundColor = [UIColor cyanColor];
-    [self.view addSubview:mapView];
+    self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 320)];
+    _chinaMapView.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:_chinaMapView];
 }
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.chinaMapView.center = self.view.center;
+}
+
 
 @end

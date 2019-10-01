@@ -37,8 +37,8 @@
     CGRect resizedFrame = StyleKitNameResizingBehaviorApply(resizing, CGRectMake(0, 0, 774, 569), targetFrame);
     CGContextTranslateCTM(context, resizedFrame.origin.x, resizedFrame.origin.y);
     CGContextScaleCTM(context, resizedFrame.size.width / 774, resizedFrame.size.height / 569);
-
-
+    
+    
     //// Color Declarations
     UIColor* strokeColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
     UIColor* fillColor = [UIColor colorWithRed: 0.8 green: 0.8 blue: 0.8 alpha: 1];
@@ -405,8 +405,8 @@
         cN34Path.lineWidth = 0.5;
         cN34Path.miterLimit = 4;
         [cN34Path stroke];
-
-
+        
+        
         //// CN-11 Drawing
         UIBezierPath* cN11Path = [UIBezierPath bezierPath];
         [cN11Path moveToPoint: CGPointMake(546.46, 257.82)];
@@ -516,8 +516,8 @@
         cN11Path.lineWidth = 0.5;
         cN11Path.miterLimit = 4;
         [cN11Path stroke];
-
-
+        
+        
         //// CN-50 Drawing
         UIBezierPath* cN50Path = [UIBezierPath bezierPath];
         [cN50Path moveToPoint: CGPointMake(441.77, 372.89)];
@@ -837,8 +837,8 @@
         cN50Path.lineWidth = 0.5;
         cN50Path.miterLimit = 4;
         [cN50Path stroke];
-
-
+        
+        
         //// CN-35 Drawing
         UIBezierPath* cN35Path = [UIBezierPath bezierPath];
         [cN35Path moveToPoint: CGPointMake(553.98, 493.05)];
@@ -1305,8 +1305,8 @@
         cN35Path.lineWidth = 0.5;
         cN35Path.miterLimit = 4;
         [cN35Path stroke];
-
-
+        
+        
         //// CN-44 Drawing
         UIBezierPath* cN44Path = [UIBezierPath bezierPath];
         [cN44Path moveToPoint: CGPointMake(496.82, 520.43)];
@@ -1828,8 +1828,8 @@
         cN44Path.lineWidth = 0.5;
         cN44Path.miterLimit = 4;
         [cN44Path stroke];
-
-
+        
+        
         //// CN-62 Drawing
         UIBezierPath* cN62Path = [UIBezierPath bezierPath];
         [cN62Path moveToPoint: CGPointMake(298.61, 204.91)];
@@ -2506,8 +2506,8 @@
         cN62Path.lineWidth = 0.5;
         cN62Path.miterLimit = 4;
         [cN62Path stroke];
-
-
+        
+        
         //// CN-45 Drawing
         UIBezierPath* cN45Path = [UIBezierPath bezierPath];
         [cN45Path moveToPoint: CGPointMake(453.95, 461.89)];
@@ -2937,8 +2937,8 @@
         cN45Path.lineWidth = 0.5;
         cN45Path.miterLimit = 4;
         [cN45Path stroke];
-
-
+        
+        
         //// CN-52 Drawing
         UIBezierPath* cN52Path = [UIBezierPath bezierPath];
         [cN52Path moveToPoint: CGPointMake(454.87, 452.2)];
@@ -3334,8 +3334,8 @@
         cN52Path.lineWidth = 0.5;
         cN52Path.miterLimit = 4;
         [cN52Path stroke];
-
-
+        
+        
         //// CN-46 Drawing
         UIBezierPath* cN46Path = [UIBezierPath bezierPath];
         [cN46Path moveToPoint: CGPointMake(469.24, 542.12)];
@@ -3446,8 +3446,8 @@
         cN46Path.lineWidth = 0.5;
         cN46Path.miterLimit = 4;
         [cN46Path stroke];
-
-
+        
+        
         //// CN-13 Drawing
         UIBezierPath* cN13Path = [UIBezierPath bezierPath];
         [cN13Path moveToPoint: CGPointMake(551.45, 250.07)];
@@ -3980,8 +3980,8 @@
         cN13Path.lineWidth = 0.5;
         cN13Path.miterLimit = 4;
         [cN13Path stroke];
-
-
+        
+        
         //// CN-41 Drawing
         UIBezierPath* cN41Path = [UIBezierPath bezierPath];
         [cN41Path moveToPoint: CGPointMake(507.6, 309.72)];
@@ -4341,8 +4341,8 @@
         cN41Path.lineWidth = 0.5;
         cN41Path.miterLimit = 4;
         [cN41Path stroke];
-
-
+        
+        
         //// CN-91 Drawing
         UIBezierPath* cN91Path = [UIBezierPath bezierPath];
         [cN91Path moveToPoint: CGPointMake(514.06, 513.52)];
@@ -4398,8 +4398,8 @@
         cN91Path.lineWidth = 0.5;
         cN91Path.miterLimit = 4;
         [cN91Path stroke];
-
-
+        
+        
         //// CN-23 Drawing
         UIBezierPath* cN23Path = [UIBezierPath bezierPath];
         [cN23Path moveToPoint: CGPointMake(630.59, 1.2)];
@@ -5168,8 +5168,8 @@
         cN23Path.lineWidth = 0.5;
         cN23Path.miterLimit = 4;
         [cN23Path stroke];
-
-
+        
+        
         //// CN-43 Drawing
         UIBezierPath* cN43Path = [UIBezierPath bezierPath];
         [cN43Path moveToPoint: CGPointMake(450.8, 418.06)];
@@ -5566,8 +5566,8 @@
         cN43Path.lineWidth = 0.5;
         cN43Path.miterLimit = 4;
         [cN43Path stroke];
-
-
+        
+        
         //// CN-42 Drawing
         UIBezierPath* cN42Path = [UIBezierPath bezierPath];
         [cN42Path moveToPoint: CGPointMake(455.19, 379.99)];
@@ -5974,8 +5974,8 @@
         cN42Path.lineWidth = 0.5;
         cN42Path.miterLimit = 4;
         [cN42Path stroke];
-
-
+        
+        
         //// CN-22 Drawing
         UIBezierPath* cN22Path = [UIBezierPath bezierPath];
         [cN22Path moveToPoint: CGPointMake(626.97, 143.52)];
@@ -6463,8 +6463,8 @@
         cN22Path.lineWidth = 0.5;
         cN22Path.miterLimit = 4;
         [cN22Path stroke];
-
-
+        
+        
         //// CN-32 Drawing
         UIBezierPath* cN32Path = [UIBezierPath bezierPath];
         [cN32Path moveToPoint: CGPointMake(541.02, 336.29)];
@@ -6755,8 +6755,8 @@
         cN32Path.lineWidth = 0.5;
         cN32Path.miterLimit = 4;
         [cN32Path stroke];
-
-
+        
+        
         //// CN-36 Drawing
         UIBezierPath* cN36Path = [UIBezierPath bezierPath];
         [cN36Path moveToPoint: CGPointMake(538, 407.92)];
@@ -7068,8 +7068,8 @@
         cN36Path.lineWidth = 0.5;
         cN36Path.miterLimit = 4;
         [cN36Path stroke];
-
-
+        
+        
         //// CN-21 Drawing
         UIBezierPath* cN21Path = [UIBezierPath bezierPath];
         [cN21Path moveToPoint: CGPointMake(608.69, 260.2)];
@@ -7492,8 +7492,8 @@
         cN21Path.lineWidth = 0.5;
         cN21Path.miterLimit = 4;
         [cN21Path stroke];
-
-
+        
+        
         //// CN-92 Drawing
         UIBezierPath* cN92Path = [UIBezierPath bezierPath];
         [cN92Path moveToPoint: CGPointMake(505.56, 515.13)];
@@ -7513,8 +7513,8 @@
         cN92Path.lineWidth = 0.5;
         cN92Path.miterLimit = 4;
         [cN92Path stroke];
-
-
+        
+        
         //// CN-15 Drawing
         UIBezierPath* cN15Path = [UIBezierPath bezierPath];
         [cN15Path moveToPoint: CGPointMake(605.72, 4.91)];
@@ -8628,8 +8628,8 @@
         cN15Path.lineWidth = 0.5;
         cN15Path.miterLimit = 4;
         [cN15Path stroke];
-
-
+        
+        
         //// CN-64 Drawing
         UIBezierPath* cN64Path = [UIBezierPath bezierPath];
         [cN64Path moveToPoint: CGPointMake(388.25, 292.91)];
@@ -8844,8 +8844,8 @@
         cN64Path.lineWidth = 0.5;
         cN64Path.miterLimit = 4;
         [cN64Path stroke];
-
-
+        
+        
         //// CN-63 Drawing
         UIBezierPath* cN63Path = [UIBezierPath bezierPath];
         [cN63Path moveToPoint: CGPointMake(245.11, 264.96)];
@@ -9437,8 +9437,8 @@
         cN63Path.lineWidth = 0.5;
         cN63Path.miterLimit = 4;
         [cN63Path stroke];
-
-
+        
+        
         //// CN-61 Drawing
         UIBezierPath* cN61Path = [UIBezierPath bezierPath];
         [cN61Path moveToPoint: CGPointMake(430.87, 285.82)];
@@ -9857,8 +9857,8 @@
         cN61Path.lineWidth = 0.5;
         cN61Path.miterLimit = 4;
         [cN61Path stroke];
-
-
+        
+        
         //// CN-51 Drawing
         UIBezierPath* cN51Path = [UIBezierPath bezierPath];
         [cN51Path moveToPoint: CGPointMake(356.6, 352.88)];
@@ -10493,8 +10493,8 @@
         cN51Path.lineWidth = 0.5;
         cN51Path.miterLimit = 4;
         [cN51Path stroke];
-
-
+        
+        
         //// CN-37 Drawing
         UIBezierPath* cN37Path = [UIBezierPath bezierPath];
         [cN37Path moveToPoint: CGPointMake(560, 279.73)];
@@ -10905,8 +10905,8 @@
         cN37Path.lineWidth = 0.5;
         cN37Path.miterLimit = 4;
         [cN37Path stroke];
-
-
+        
+        
         //// CN-31 Drawing
         UIBezierPath* cN31Path = [UIBezierPath bezierPath];
         [cN31Path moveToPoint: CGPointMake(617.84, 394.31)];
@@ -10985,8 +10985,8 @@
         cN31Path.lineWidth = 0.5;
         cN31Path.miterLimit = 4;
         [cN31Path stroke];
-
-
+        
+        
         //// CN-14 Drawing
         UIBezierPath* cN14Path = [UIBezierPath bezierPath];
         [cN14Path moveToPoint: CGPointMake(512.7, 239.27)];
@@ -11264,8 +11264,8 @@
         cN14Path.lineWidth = 0.5;
         cN14Path.miterLimit = 4;
         [cN14Path stroke];
-
-
+        
+        
         //// CN-12 Drawing
         UIBezierPath* cN12Path = [UIBezierPath bezierPath];
         [cN12Path moveToPoint: CGPointMake(553.79, 247.69)];
@@ -11365,8 +11365,8 @@
         cN12Path.lineWidth = 0.5;
         cN12Path.miterLimit = 4;
         [cN12Path stroke];
-
-
+        
+        
         //// CN-71 Drawing
         UIBezierPath* cN71Path = [UIBezierPath bezierPath];
         [cN71Path moveToPoint: CGPointMake(606.73, 516.2)];
@@ -11489,8 +11489,8 @@
         cN71Path.lineWidth = 0.5;
         cN71Path.miterLimit = 4;
         [cN71Path stroke];
-
-
+        
+        
         //// CN-65 Drawing
         UIBezierPath* cN65Path = [UIBezierPath bezierPath];
         [cN65Path moveToPoint: CGPointMake(180.43, 88.68)];
@@ -12204,8 +12204,8 @@
         cN65Path.lineWidth = 0.5;
         cN65Path.miterLimit = 4;
         [cN65Path stroke];
-
-
+        
+        
         //// CN-54 Drawing
         UIBezierPath* cN54Path = [UIBezierPath bezierPath];
         [cN54Path moveToPoint: CGPointMake(67.91, 340.39)];
@@ -12999,8 +12999,8 @@
         cN54Path.lineWidth = 0.5;
         cN54Path.miterLimit = 4;
         [cN54Path stroke];
-
-
+        
+        
         //// CN-53 Drawing
         UIBezierPath* cN53Path = [UIBezierPath bezierPath];
         [cN53Path moveToPoint: CGPointMake(322.97, 416.21)];
@@ -13600,8 +13600,8 @@
         cN53Path.lineWidth = 0.5;
         cN53Path.miterLimit = 4;
         [cN53Path stroke];
-
-
+        
+        
         //// CN-33 Drawing
         UIBezierPath* cN33Path = [UIBezierPath bezierPath];
         [cN33Path moveToPoint: CGPointMake(610.42, 405.84)];
@@ -14004,8 +14004,8 @@
         cN33Path.lineWidth = 0.5;
         cN33Path.miterLimit = 4;
         [cN33Path stroke];
-
-
+        
+        
         //// Text Drawing
         CGRect textRect = CGRectMake(662, 125, 50, 19);
         {
@@ -14013,15 +14013,15 @@
             NSMutableParagraphStyle* textStyle = [[NSMutableParagraphStyle alloc] init];
             textStyle.alignment = NSTextAlignmentLeft;
             NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: textStyle};
-
+            
             CGFloat textTextHeight = [textContent boundingRectWithSize: CGSizeMake(textRect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: textFontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, textRect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(textRect), CGRectGetMinY(textRect) + (textRect.size.height - textTextHeight) / 2, textRect.size.width, textTextHeight) withAttributes: textFontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 2 Drawing
         CGRect text2Rect = CGRectMake(662, 193, 50, 19);
         {
@@ -14029,15 +14029,15 @@
             NSMutableParagraphStyle* text2Style = [[NSMutableParagraphStyle alloc] init];
             text2Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text2FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text2Style};
-
+            
             CGFloat text2TextHeight = [textContent boundingRectWithSize: CGSizeMake(text2Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text2FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text2Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text2Rect), CGRectGetMinY(text2Rect) + (text2Rect.size.height - text2TextHeight) / 2, text2Rect.size.width, text2TextHeight) withAttributes: text2FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 3 Drawing
         CGRect text3Rect = CGRectMake(607.5, 212, 50, 19);
         {
@@ -14045,15 +14045,15 @@
             NSMutableParagraphStyle* text3Style = [[NSMutableParagraphStyle alloc] init];
             text3Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text3FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text3Style};
-
+            
             CGFloat text3TextHeight = [textContent boundingRectWithSize: CGSizeMake(text3Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text3FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text3Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text3Rect), CGRectGetMinY(text3Rect) + (text3Rect.size.height - text3TextHeight) / 2, text3Rect.size.width, text3TextHeight) withAttributes: text3FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 4 Drawing
         CGRect text4Rect = CGRectMake(535, 237, 50, 19);
         {
@@ -14061,15 +14061,15 @@
             NSMutableParagraphStyle* text4Style = [[NSMutableParagraphStyle alloc] init];
             text4Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text4FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text4Style};
-
+            
             CGFloat text4TextHeight = [textContent boundingRectWithSize: CGSizeMake(text4Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text4FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text4Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text4Rect), CGRectGetMinY(text4Rect) + (text4Rect.size.height - text4TextHeight) / 2, text4Rect.size.width, text4TextHeight) withAttributes: text4FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 5 Drawing
         CGRect text5Rect = CGRectMake(551, 256, 50, 19);
         {
@@ -14077,15 +14077,15 @@
             NSMutableParagraphStyle* text5Style = [[NSMutableParagraphStyle alloc] init];
             text5Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text5FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text5Style};
-
+            
             CGFloat text5TextHeight = [textContent boundingRectWithSize: CGSizeMake(text5Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text5FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text5Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text5Rect), CGRectGetMinY(text5Rect) + (text5Rect.size.height - text5TextHeight) / 2, text5Rect.size.width, text5TextHeight) withAttributes: text5FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 6 Drawing
         CGRect text6Rect = CGRectMake(517, 271, 50, 19);
         {
@@ -14093,15 +14093,15 @@
             NSMutableParagraphStyle* text6Style = [[NSMutableParagraphStyle alloc] init];
             text6Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text6FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text6Style};
-
+            
             CGFloat text6TextHeight = [textContent boundingRectWithSize: CGSizeMake(text6Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text6FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text6Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text6Rect), CGRectGetMinY(text6Rect) + (text6Rect.size.height - text6TextHeight) / 2, text6Rect.size.width, text6TextHeight) withAttributes: text6FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 7 Drawing
         CGRect text7Rect = CGRectMake(544.5, 300.5, 50, 19);
         {
@@ -14109,15 +14109,15 @@
             NSMutableParagraphStyle* text7Style = [[NSMutableParagraphStyle alloc] init];
             text7Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text7FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text7Style};
-
+            
             CGFloat text7TextHeight = [textContent boundingRectWithSize: CGSizeMake(text7Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text7FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text7Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text7Rect), CGRectGetMinY(text7Rect) + (text7Rect.size.height - text7TextHeight) / 2, text7Rect.size.width, text7TextHeight) withAttributes: text7FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 8 Drawing
         CGRect text8Rect = CGRectMake(579.5, 354, 50, 19);
         {
@@ -14125,15 +14125,15 @@
             NSMutableParagraphStyle* text8Style = [[NSMutableParagraphStyle alloc] init];
             text8Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text8FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text8Style};
-
+            
             CGFloat text8TextHeight = [textContent boundingRectWithSize: CGSizeMake(text8Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text8FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text8Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text8Rect), CGRectGetMinY(text8Rect) + (text8Rect.size.height - text8TextHeight) / 2, text8Rect.size.width, text8TextHeight) withAttributes: text8FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 9 Drawing
         CGRect text9Rect = CGRectMake(577.5, 407.5, 50, 19);
         {
@@ -14141,15 +14141,15 @@
             NSMutableParagraphStyle* text9Style = [[NSMutableParagraphStyle alloc] init];
             text9Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text9FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text9Style};
-
+            
             CGFloat text9TextHeight = [textContent boundingRectWithSize: CGSizeMake(text9Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text9FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text9Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text9Rect), CGRectGetMinY(text9Rect) + (text9Rect.size.height - text9TextHeight) / 2, text9Rect.size.width, text9TextHeight) withAttributes: text9FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 10 Drawing
         CGRect text10Rect = CGRectMake(604, 381, 50, 19);
         {
@@ -14157,15 +14157,15 @@
             NSMutableParagraphStyle* text10Style = [[NSMutableParagraphStyle alloc] init];
             text10Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text10FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text10Style};
-
+            
             CGFloat text10TextHeight = [textContent boundingRectWithSize: CGSizeMake(text10Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text10FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text10Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text10Rect), CGRectGetMinY(text10Rect) + (text10Rect.size.height - text10TextHeight) / 2, text10Rect.size.width, text10TextHeight) withAttributes: text10FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 11 Drawing
         CGRect text11Rect = CGRectMake(548, 453, 50, 19);
         {
@@ -14173,15 +14173,15 @@
             NSMutableParagraphStyle* text11Style = [[NSMutableParagraphStyle alloc] init];
             text11Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text11FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text11Style};
-
+            
             CGFloat text11TextHeight = [textContent boundingRectWithSize: CGSizeMake(text11Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text11FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text11Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text11Rect), CGRectGetMinY(text11Rect) + (text11Rect.size.height - text11TextHeight) / 2, text11Rect.size.width, text11TextHeight) withAttributes: text11FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 12 Drawing
         CGRect text12Rect = CGRectMake(592, 483, 50, 19);
         {
@@ -14189,15 +14189,15 @@
             NSMutableParagraphStyle* text12Style = [[NSMutableParagraphStyle alloc] init];
             text12Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text12FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text12Style};
-
+            
             CGFloat text12TextHeight = [textContent boundingRectWithSize: CGSizeMake(text12Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text12FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text12Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text12Rect), CGRectGetMinY(text12Rect) + (text12Rect.size.height - text12TextHeight) / 2, text12Rect.size.width, text12TextHeight) withAttributes: text12FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 13 Drawing
         CGRect text13Rect = CGRectMake(456.5, 546, 50, 19);
         {
@@ -14205,15 +14205,15 @@
             NSMutableParagraphStyle* text13Style = [[NSMutableParagraphStyle alloc] init];
             text13Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text13FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text13Style};
-
+            
             CGFloat text13TextHeight = [textContent boundingRectWithSize: CGSizeMake(text13Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text13FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text13Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text13Rect), CGRectGetMinY(text13Rect) + (text13Rect.size.height - text13TextHeight) / 2, text13Rect.size.width, text13TextHeight) withAttributes: text13FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 14 Drawing
         CGRect text14Rect = CGRectMake(491, 486.5, 50, 19);
         {
@@ -14221,15 +14221,15 @@
             NSMutableParagraphStyle* text14Style = [[NSMutableParagraphStyle alloc] init];
             text14Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text14FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text14Style};
-
+            
             CGFloat text14TextHeight = [textContent boundingRectWithSize: CGSizeMake(text14Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text14FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text14Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text14Rect), CGRectGetMinY(text14Rect) + (text14Rect.size.height - text14TextHeight) / 2, text14Rect.size.width, text14TextHeight) withAttributes: text14FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 15 Drawing
         CGRect text15Rect = CGRectMake(516, 505, 50, 19);
         {
@@ -14237,15 +14237,15 @@
             NSMutableParagraphStyle* text15Style = [[NSMutableParagraphStyle alloc] init];
             text15Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text15FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text15Style};
-
+            
             CGFloat text15TextHeight = [textContent boundingRectWithSize: CGSizeMake(text15Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text15FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text15Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text15Rect), CGRectGetMinY(text15Rect) + (text15Rect.size.height - text15TextHeight) / 2, text15Rect.size.width, text15TextHeight) withAttributes: text15FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 16 Drawing
         CGRect text16Rect = CGRectMake(495, 516, 50, 19);
         {
@@ -14253,15 +14253,15 @@
             NSMutableParagraphStyle* text16Style = [[NSMutableParagraphStyle alloc] init];
             text16Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text16FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text16Style};
-
+            
             CGFloat text16TextHeight = [textContent boundingRectWithSize: CGSizeMake(text16Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text16FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text16Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text16Rect), CGRectGetMinY(text16Rect) + (text16Rect.size.height - text16TextHeight) / 2, text16Rect.size.width, text16TextHeight) withAttributes: text16FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 17 Drawing
         CGRect text17Rect = CGRectMake(415, 477, 80, 19);
         {
@@ -14269,15 +14269,15 @@
             NSMutableParagraphStyle* text17Style = [[NSMutableParagraphStyle alloc] init];
             text17Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text17FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text17Style};
-
+            
             CGFloat text17TextHeight = [textContent boundingRectWithSize: CGSizeMake(text17Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text17FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text17Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text17Rect), CGRectGetMinY(text17Rect) + (text17Rect.size.height - text17TextHeight) / 2, text17Rect.size.width, text17TextHeight) withAttributes: text17FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 18 Drawing
         CGRect text18Rect = CGRectMake(337, 472, 54, 19);
         {
@@ -14285,15 +14285,15 @@
             NSMutableParagraphStyle* text18Style = [[NSMutableParagraphStyle alloc] init];
             text18Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text18FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text18Style};
-
+            
             CGFloat text18TextHeight = [textContent boundingRectWithSize: CGSizeMake(text18Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text18FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text18Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text18Rect), CGRectGetMinY(text18Rect) + (text18Rect.size.height - text18TextHeight) / 2, text18Rect.size.width, text18TextHeight) withAttributes: text18FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 19 Drawing
         CGRect text19Rect = CGRectMake(517.5, 427, 50, 19);
         {
@@ -14301,15 +14301,15 @@
             NSMutableParagraphStyle* text19Style = [[NSMutableParagraphStyle alloc] init];
             text19Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text19FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text19Style};
-
+            
             CGFloat text19TextHeight = [textContent boundingRectWithSize: CGSizeMake(text19Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text19FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text19Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text19Rect), CGRectGetMinY(text19Rect) + (text19Rect.size.height - text19TextHeight) / 2, text19Rect.size.width, text19TextHeight) withAttributes: text19FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 20 Drawing
         CGRect text20Rect = CGRectMake(466, 427, 50, 19);
         {
@@ -14317,15 +14317,15 @@
             NSMutableParagraphStyle* text20Style = [[NSMutableParagraphStyle alloc] init];
             text20Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text20FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text20Style};
-
+            
             CGFloat text20TextHeight = [textContent boundingRectWithSize: CGSizeMake(text20Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text20FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text20Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text20Rect), CGRectGetMinY(text20Rect) + (text20Rect.size.height - text20TextHeight) / 2, text20Rect.size.width, text20TextHeight) withAttributes: text20FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 21 Drawing
         CGRect text21Rect = CGRectMake(406.5, 442.5, 50, 19);
         {
@@ -14333,15 +14333,15 @@
             NSMutableParagraphStyle* text21Style = [[NSMutableParagraphStyle alloc] init];
             text21Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text21FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text21Style};
-
+            
             CGFloat text21TextHeight = [textContent boundingRectWithSize: CGSizeMake(text21Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text21FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text21Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text21Rect), CGRectGetMinY(text21Rect) + (text21Rect.size.height - text21TextHeight) / 2, text21Rect.size.width, text21TextHeight) withAttributes: text21FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 22 Drawing
         CGRect text22Rect = CGRectMake(346.5, 385, 50, 19);
         {
@@ -14349,15 +14349,15 @@
             NSMutableParagraphStyle* text22Style = [[NSMutableParagraphStyle alloc] init];
             text22Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text22FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text22Style};
-
+            
             CGFloat text22TextHeight = [textContent boundingRectWithSize: CGSizeMake(text22Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text22FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text22Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text22Rect), CGRectGetMinY(text22Rect) + (text22Rect.size.height - text22TextHeight) / 2, text22Rect.size.width, text22TextHeight) withAttributes: text22FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 23 Drawing
         CGRect text23Rect = CGRectMake(150.5, 369, 62, 19);
         {
@@ -14365,15 +14365,15 @@
             NSMutableParagraphStyle* text23Style = [[NSMutableParagraphStyle alloc] init];
             text23Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text23FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text23Style};
-
+            
             CGFloat text23TextHeight = [textContent boundingRectWithSize: CGSizeMake(text23Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text23FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text23Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text23Rect), CGRectGetMinY(text23Rect) + (text23Rect.size.height - text23TextHeight) / 2, text23Rect.size.width, text23TextHeight) withAttributes: text23FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 24 Drawing
         CGRect text24Rect = CGRectMake(112, 218, 92, 19);
         {
@@ -14381,15 +14381,15 @@
             NSMutableParagraphStyle* text24Style = [[NSMutableParagraphStyle alloc] init];
             text24Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text24FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text24Style};
-
+            
             CGFloat text24TextHeight = [textContent boundingRectWithSize: CGSizeMake(text24Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text24FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text24Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text24Rect), CGRectGetMinY(text24Rect) + (text24Rect.size.height - text24TextHeight) / 2, text24Rect.size.width, text24TextHeight) withAttributes: text24FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 25 Drawing
         CGRect text25Rect = CGRectMake(243, 308, 62, 19);
         {
@@ -14397,15 +14397,15 @@
             NSMutableParagraphStyle* text25Style = [[NSMutableParagraphStyle alloc] init];
             text25Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text25FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text25Style};
-
+            
             CGFloat text25TextHeight = [textContent boundingRectWithSize: CGSizeMake(text25Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text25FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text25Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text25Rect), CGRectGetMinY(text25Rect) + (text25Rect.size.height - text25TextHeight) / 2, text25Rect.size.width, text25TextHeight) withAttributes: text25FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 26 Drawing
         CGRect text26Rect = CGRectMake(346.5, 271, 62, 19);
         {
@@ -14413,15 +14413,15 @@
             NSMutableParagraphStyle* text26Style = [[NSMutableParagraphStyle alloc] init];
             text26Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text26FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text26Style};
-
+            
             CGFloat text26TextHeight = [textContent boundingRectWithSize: CGSizeMake(text26Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text26FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text26Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text26Rect), CGRectGetMinY(text26Rect) + (text26Rect.size.height - text26TextHeight) / 2, text26Rect.size.width, text26TextHeight) withAttributes: text26FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 27 Drawing
         CGRect text27Rect = CGRectMake(424, 221, 82, 19);
         {
@@ -14429,15 +14429,15 @@
             NSMutableParagraphStyle* text27Style = [[NSMutableParagraphStyle alloc] init];
             text27Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text27FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text27Style};
-
+            
             CGFloat text27TextHeight = [textContent boundingRectWithSize: CGSizeMake(text27Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text27FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text27Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text27Rect), CGRectGetMinY(text27Rect) + (text27Rect.size.height - text27TextHeight) / 2, text27Rect.size.width, text27TextHeight) withAttributes: text27FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 28 Drawing
         CGRect text28Rect = CGRectMake(399, 283.5, 82, 19);
         {
@@ -14445,15 +14445,15 @@
             NSMutableParagraphStyle* text28Style = [[NSMutableParagraphStyle alloc] init];
             text28Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text28FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 10], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text28Style};
-
+            
             CGFloat text28TextHeight = [textContent boundingRectWithSize: CGSizeMake(text28Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text28FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text28Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text28Rect), CGRectGetMinY(text28Rect) + (text28Rect.size.height - text28TextHeight) / 2, text28Rect.size.width, text28TextHeight) withAttributes: text28FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 29 Drawing
         CGRect text29Rect = CGRectMake(431, 335, 62, 19);
         {
@@ -14461,15 +14461,15 @@
             NSMutableParagraphStyle* text29Style = [[NSMutableParagraphStyle alloc] init];
             text29Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text29FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text29Style};
-
+            
             CGFloat text29TextHeight = [textContent boundingRectWithSize: CGSizeMake(text29Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text29FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text29Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text29Rect), CGRectGetMinY(text29Rect) + (text29Rect.size.height - text29TextHeight) / 2, text29Rect.size.width, text29TextHeight) withAttributes: text29FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 30 Drawing
         CGRect text30Rect = CGRectMake(473, 271, 62, 19);
         {
@@ -14477,15 +14477,15 @@
             NSMutableParagraphStyle* text30Style = [[NSMutableParagraphStyle alloc] init];
             text30Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text30FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text30Style};
-
+            
             CGFloat text30TextHeight = [textContent boundingRectWithSize: CGSizeMake(text30Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text30FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text30Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text30Rect), CGRectGetMinY(text30Rect) + (text30Rect.size.height - text30TextHeight) / 2, text30Rect.size.width, text30TextHeight) withAttributes: text30FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 31 Drawing
         CGRect text31Rect = CGRectMake(489, 335, 62, 19);
         {
@@ -14493,15 +14493,15 @@
             NSMutableParagraphStyle* text31Style = [[NSMutableParagraphStyle alloc] init];
             text31Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text31FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text31Style};
-
+            
             CGFloat text31TextHeight = [textContent boundingRectWithSize: CGSizeMake(text31Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text31FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text31Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text31Rect), CGRectGetMinY(text31Rect) + (text31Rect.size.height - text31TextHeight) / 2, text31Rect.size.width, text31TextHeight) withAttributes: text31FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 32 Drawing
         CGRect text32Rect = CGRectMake(538, 373, 62, 19);
         {
@@ -14509,15 +14509,15 @@
             NSMutableParagraphStyle* text32Style = [[NSMutableParagraphStyle alloc] init];
             text32Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text32FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text32Style};
-
+            
             CGFloat text32TextHeight = [textContent boundingRectWithSize: CGSizeMake(text32Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text32FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text32Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text32Rect), CGRectGetMinY(text32Rect) + (text32Rect.size.height - text32TextHeight) / 2, text32Rect.size.width, text32TextHeight) withAttributes: text32FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 33 Drawing
         CGRect text33Rect = CGRectMake(473, 378.5, 62, 19);
         {
@@ -14525,15 +14525,15 @@
             NSMutableParagraphStyle* text33Style = [[NSMutableParagraphStyle alloc] init];
             text33Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text33FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text33Style};
-
+            
             CGFloat text33TextHeight = [textContent boundingRectWithSize: CGSizeMake(text33Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text33FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text33Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text33Rect), CGRectGetMinY(text33Rect) + (text33Rect.size.height - text33TextHeight) / 2, text33Rect.size.width, text33TextHeight) withAttributes: text33FontAttributes];
             CGContextRestoreGState(context);
         }
-
-
+        
+        
         //// Text 34 Drawing
         CGRect text34Rect = CGRectMake(419, 392, 62, 19);
         {
@@ -14541,17 +14541,18 @@
             NSMutableParagraphStyle* text34Style = [[NSMutableParagraphStyle alloc] init];
             text34Style.alignment = NSTextAlignmentLeft;
             NSDictionary* text34FontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize: 11], NSForegroundColorAttributeName: UIColor.blackColor, NSParagraphStyleAttributeName: text34Style};
-
+            
             CGFloat text34TextHeight = [textContent boundingRectWithSize: CGSizeMake(text34Rect.size.width, INFINITY) options: NSStringDrawingUsesLineFragmentOrigin attributes: text34FontAttributes context: nil].size.height;
             CGContextSaveGState(context);
             CGContextClipToRect(context, text34Rect);
             [textContent drawInRect: CGRectMake(CGRectGetMinX(text34Rect), CGRectGetMinY(text34Rect) + (text34Rect.size.height - text34TextHeight) / 2, text34Rect.size.width, text34TextHeight) withAttributes: text34FontAttributes];
             CGContextRestoreGState(context);
         }
+    
     }
     
     CGContextRestoreGState(context);
-
+    
 }
 
 @end
@@ -14562,11 +14563,11 @@ CGRect StyleKitNameResizingBehaviorApply(StyleKitNameResizingBehavior behavior, 
 {
     if (CGRectEqualToRect(rect, target) || CGRectEqualToRect(target, CGRectZero))
         return rect;
-
+    
     CGSize scales = CGSizeZero;
     scales.width = ABS(target.size.width / rect.size.width);
     scales.height = ABS(target.size.height / rect.size.height);
-
+    
     switch (behavior)
     {
         case StyleKitNameResizingBehaviorAspectFit:
@@ -14590,7 +14591,7 @@ CGRect StyleKitNameResizingBehaviorApply(StyleKitNameResizingBehavior behavior, 
             break;
         }
     }
-
+    
     CGRect result = CGRectStandardize(rect);
     result.size.width *= scales.width;
     result.size.height *= scales.height;

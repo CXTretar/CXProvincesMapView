@@ -21,6 +21,7 @@
      [SwiftLaunchView launchAnimation];
     // Do any additional setup after loading the view.
 }
+
 - (IBAction)mapClick:(id)sender {
     
     [self.navigationController pushViewController:[SampleMapController new] animated:YES];
@@ -30,7 +31,6 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
    
-    
 }
 
 

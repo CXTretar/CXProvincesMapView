@@ -18,7 +18,10 @@
 
 @implementation CXProvincesMapView
 
-
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor:backgroundColor];
+   _chinaMapView.backgroundColor = backgroundColor;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -32,7 +35,7 @@
 - (void)setupUI {
     
     self.scrollview = [UIScrollView new];
-    self.scrollview.backgroundColor = [UIColor redColor];
+   
     //设置实现缩放
     //设置代理scrollview的代理对象
     _scrollview.delegate = self;
@@ -41,16 +44,13 @@
     //设置最小伸缩比例
     _scrollview.minimumZoomScale = 1.0;
     [_scrollview setZoomScale:1.0 animated:NO];
-    
-    
+
     
     [self addSubview:self.scrollview];
     self.chinaMapView = [ChinaMapView new];
-    
+
     self.scrollview.frame = self.bounds;
     self.chinaMapView.frame = self.scrollview.bounds;
-    
-    self.chinaMapView.backgroundColor = [UIColor greenColor];
     [self.scrollview addSubview:self.chinaMapView];
     
 }
@@ -59,9 +59,8 @@
     [super layoutSubviews];
     
 }
-//告诉scrollview要缩放的是哪个子控件
+// 告诉scrollview要缩放的是哪个子控件
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    //    return self.bgImage;
     return _chinaMapView;
 }
 
