@@ -48,6 +48,9 @@
     
     [self addSubview:self.scrollview];
     self.chinaMapView = [ChinaMapView new];
+    self.chinaMapView.fillColor = [UIColor greenColor];
+    self.chinaMapView.selectedColor = [UIColor blueColor];
+//    self.chinaMapView.strokeColor = [UIColor ]
 
     self.scrollview.frame = self.bounds;
     self.chinaMapView.frame = self.scrollview.bounds;

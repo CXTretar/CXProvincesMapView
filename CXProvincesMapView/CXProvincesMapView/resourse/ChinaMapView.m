@@ -9,13 +9,29 @@
 #import "ChinaMapView.h"
 #import "ChinaMapPath.h"
 
+#define MAP_SIZE_WIDTH 774
+#define MAP_SIZE_HEIGHT 569
+#define DEFAULT_FILL_COLOR   [UIColor colorWithRed: 0.8 green: 0.8 blue: 0.8 alpha: 1]
+#define DEFAULT_SELECTED_COLOR  [UIColor colorWithHexString:@"ea5c44"]
+#define DEFAULT_STROKE_COLOR [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+
 @interface ChinaMapView ()
 
 @property(nonatomic, strong) ChinaMapPath *mapPath;
+@property(nonatomic, strong) NSMutableArray *pathColorArray;
+@property(nonatomic, assign) NSInteger selectedIndex;
 
 @end
 
 @implementation ChinaMapView
+
+- (void)setFillColor:(UIColor *)fillColor {
+    _pathColorArray = [NSMutableArray arrayWithCapacity: self.mapPath.pathArray.count];
+    for (int i = 0; i < _mapPath.pathArray.count; i++) {
+        [_pathColorArray addObject:fillColor];
+    }
+    _fillColor = fillColor;
+}
 
 - (ChinaMapPath *)mapPath {
     if (!_mapPath) {
@@ -26,8 +42,11 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.fillColor = DEFAULT_FILL_COLOR;
+        self.selectedColor = DEFAULT_FILL_COLOR;
+        self.strokeColor = DEFAULT_STROKE_COLOR;
+        self.selectedIndex = 0;
         UITapGestureRecognizer *click = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)];
-        
         [self addGestureRecognizer:click];
     }
     
@@ -37,18 +56,21 @@
 - (void)click:(UITapGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:sender.view];
     
-    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, 774, 569) target: self.bounds];
-    point = CGPointMake(point.x * 774 / resizedFrame.size.width , point.y  * 569 /resizedFrame.size.height );
-    NSLog(@"%@", NSStringFromCGPoint(point));
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target: self.bounds];
+    point = CGPointMake(point.x * MAP_SIZE_WIDTH / resizedFrame.size.width , point.y  * MAP_SIZE_HEIGHT /resizedFrame.size.height );
+    
     for (int i = 0; i < self.mapPath.pathArray.count; i++) {
         UIBezierPath *path = self.mapPath.pathArray[i];
         
         if ([path containsPoint:point]) {
-            NSLog(@"%d", [path containsPoint:point]);
             //清除之前选中的颜色，fill当前选中的颜色
+            self.pathColorArray[_selectedIndex] = self.fillColor;
+            _selectedIndex = i;
+            self.pathColorArray[i] = self.selectedColor;
             
-            NSLog(@"%@ -- %d", self.mapPath.textArray[i], i);
             [self setNeedsDisplay];
+            
+            break;
         }
     }
     
@@ -60,21 +82,21 @@
     
     //// Resize to Target Frame
     CGContextSaveGState(context);
-    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, 774, 569) target: self.bounds];
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target: self.bounds];
     CGContextTranslateCTM(context, resizedFrame.origin.x, resizedFrame.origin.y);
-    CGContextScaleCTM(context, resizedFrame.size.width / 774, resizedFrame.size.height / 569);
+    CGContextScaleCTM(context, resizedFrame.size.width / MAP_SIZE_WIDTH, resizedFrame.size.height / MAP_SIZE_HEIGHT);
     
-    NSLog(@"%s", __func__);
-    UIColor* strokeColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
-    UIColor* fillColor = [UIColor colorWithRed: 0.8 green: 0.8 blue: 0.8 alpha: 1];
-    NSLog(@"%@", self.mapPath);
+    UIColor* strokeColor = self.strokeColor;
+    
     [self.mapPath.pathArray enumerateObjectsUsingBlock:^(UIBezierPath *path, NSUInteger idx, BOOL * _Nonnull stop) {
-        [fillColor setFill];
+        
+        [self.pathColorArray[idx] setFill];
         [path fill];
         [strokeColor setStroke];
         path.lineWidth = 0.5;
         path.miterLimit = 4;
         [path stroke];
+        
     }];
     
     
@@ -109,8 +131,8 @@
     CGRect result = CGRectStandardize(rect);
     result.size.width *= scales.width;
     result.size.height *= scales.height;
-//    result.origin.x = target.origin.x + (target.size.width - result.size.width) / 2;
-//    result.origin.y = target.origin.y + (target.size.height - result.size.height) / 2;
+    //    result.origin.x = target.origin.x + (target.size.width - result.size.width) / 2;
+    //    result.origin.y = target.origin.y + (target.size.height - result.size.height) / 2;
     return result;
 }
 

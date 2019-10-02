@@ -32,5 +32,9 @@
     self.chinaMapView.center = self.view.center;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+   
+}
+
 
 @end
