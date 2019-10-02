@@ -40,7 +40,7 @@
     //设置代理scrollview的代理对象
     _scrollview.delegate = self;
     //设置最大伸缩比例
-    _scrollview.maximumZoomScale = 2.0;
+    _scrollview.maximumZoomScale = 10.0;
     //设置最小伸缩比例
     _scrollview.minimumZoomScale = 1.0;
     [_scrollview setZoomScale:1.0 animated:NO];

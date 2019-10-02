@@ -13804,14 +13804,24 @@
         [cN33Path closePath];
         
         _pathArray = @[
-            cN11Path, cN12Path, cN13Path, cN14Path, cN15Path,
-            cN21Path, cN22Path, cN23Path, cN31Path, cN32Path,
-            cN33Path, cN34Path, cN35Path, cN36Path, cN37Path,
-            cN41Path, cN42Path, cN43Path, cN44Path, cN45Path,
-            cN46Path, cN50Path, cN51Path, cN52Path, cN53Path,
-            cN54Path, cN61Path, cN62Path, cN63Path, cN64Path,
-            cN65Path, cN71Path, cN91Path, cN92Path,
+            cN23Path, cN22Path, cN21Path, cN11Path, cN12Path,
+            cN13Path, cN37Path, cN32Path, cN33Path, cN31Path,
+            cN35Path, cN71Path, cN46Path, cN44Path, cN91Path,
+            cN92Path, cN45Path, cN53Path, cN36Path, cN43Path,
+            cN52Path, cN51Path, cN54Path, cN65Path, cN63Path,
+            cN62Path, cN15Path, cN64Path, cN61Path, cN14Path,
+            cN41Path, cN34Path, cN42Path, cN50Path,
         ];
+        
+//        @[
+//            @"黑龙江省",  @"吉林省", @"辽宁省", @"北京市", @"天津市",
+//            @"河北省", @"山东省", @"江苏省", @"浙江省", @"上海市",
+//            @"福建省", @"台湾省", @"海南省", @"广东省", @"香港",
+//            @"澳门", @"广西壮族自治区", @"云南省", @"江西省", @"湖南省",
+//            @"贵州省", @"四川省", @"西藏自治区", @"新疆维吾尔自治区", @"青海省",
+//            @"甘肃省", @"内蒙古自治区", @"宁夏回族自治区", @"陕西省", @"山西省",
+//            @"河南省", @"安徽省", @"湖北省", @"重庆市",
+//        ];
     }
     
     return _pathArray;

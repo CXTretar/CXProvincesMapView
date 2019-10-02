@@ -36,12 +36,22 @@
 
 - (void)click:(UITapGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:sender.view];
+    
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, 774, 569) target: self.bounds];
+    point = CGPointMake(point.x * 774 / resizedFrame.size.width , point.y  * 569 /resizedFrame.size.height );
     NSLog(@"%@", NSStringFromCGPoint(point));
-    [self setNeedsDisplay];
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
+    for (int i = 0; i < self.mapPath.pathArray.count; i++) {
+        UIBezierPath *path = self.mapPath.pathArray[i];
+        
+        if ([path containsPoint:point]) {
+            NSLog(@"%d", [path containsPoint:point]);
+            //清除之前选中的颜色，fill当前选中的颜色
+            
+            NSLog(@"%@ -- %d", self.mapPath.textArray[i], i);
+            [self setNeedsDisplay];
+        }
+    }
+    
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -82,7 +92,7 @@
         [textContent drawInRect: CGRectMake(CGRectGetMinX(textRect), CGRectGetMinY(textRect) + (textRect.size.height - textTextHeight) / 2, textRect.size.width, textTextHeight) withAttributes: textFontAttributes];
         CGContextRestoreGState(context);
     }
-
+    
 }
 
 - (CGRect)resizing:(CGRect)rect target:(CGRect)target {
@@ -99,8 +109,8 @@
     CGRect result = CGRectStandardize(rect);
     result.size.width *= scales.width;
     result.size.height *= scales.height;
-    result.origin.x = target.origin.x + (target.size.width - result.size.width) / 2;
-    result.origin.y = target.origin.y + (target.size.height - result.size.height) / 2;
+//    result.origin.x = target.origin.x + (target.size.width - result.size.width) / 2;
+//    result.origin.y = target.origin.y + (target.size.height - result.size.height) / 2;
     return result;
 }
 
