@@ -88,7 +88,6 @@
     }
 }
 
-
 - (instancetype)init {
     if (self = [super init]) {
         self.selectedIndex = 0;

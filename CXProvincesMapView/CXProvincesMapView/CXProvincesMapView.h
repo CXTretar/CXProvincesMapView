@@ -39,7 +39,7 @@
 @property(nonatomic, strong) UIColor *textSelectedColor;   // 选中省份字体的颜色
 
 @property(nonatomic, assign) CGFloat minimumZoomScale;     // default is 1.0
-@property(nonatomic, assign) CGFloat maximumZoomScale;     // default is 10.0
+@property(nonatomic, assign) CGFloat maximumZoomScale;     // default is 2.0
 
 @property(nonatomic, weak) id <CXProvincesMapViewDelegate>delegate;
 
