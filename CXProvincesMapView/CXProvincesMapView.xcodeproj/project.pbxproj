@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC553C462291AFC700D6B551 /* ChinaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC553C452291AFC700D6B551 /* ChinaMapView.m */; };
+		CAE5647423538540003CBD3F /* ChinaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE5647023538540003CBD3F /* ChinaMapView.m */; };
+		CAE5647523538540003CBD3F /* ChinaMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE5647123538540003CBD3F /* ChinaMapPath.m */; };
+		CAE5647623538540003CBD3F /* CXProvincesMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE5647323538540003CBD3F /* CXProvincesMapView.m */; };
 		DC5D89D6226B725700F16B77 /* SwiftLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */; };
 		DC70E7E82264E0D000BBC128 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7E72264E0D000BBC128 /* AppDelegate.m */; };
 		DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7EA2264E0D000BBC128 /* ViewController.m */; };
@@ -15,15 +17,17 @@
 		DC70E7F02264E0D100BBC128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC70E7EF2264E0D100BBC128 /* Assets.xcassets */; };
 		DC70E7F32264E0D100BBC128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC70E7F12264E0D100BBC128 /* LaunchScreen.storyboard */; };
 		DC70E7F62264E0D100BBC128 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC70E7F52264E0D100BBC128 /* main.m */; };
-		DCAE735822774AF9002C1B7F /* ChinaMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAE735722774AF9002C1B7F /* ChinaMapPath.m */; };
 		DCAE735B227756AF002C1B7F /* StyleKitName.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAE7359227756AF002C1B7F /* StyleKitName.m */; };
-		DCE8380C226E14DC0067AC93 /* CXProvincesMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE8380B226E14DC0067AC93 /* CXProvincesMapView.m */; };
 		DCE8380F226E15310067AC93 /* SampleMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE8380E226E15310067AC93 /* SampleMapController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC553C442291AFC700D6B551 /* ChinaMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChinaMapView.h; sourceTree = "<group>"; };
-		DC553C452291AFC700D6B551 /* ChinaMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChinaMapView.m; sourceTree = "<group>"; };
+		CAE5646E23538540003CBD3F /* ChinaMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChinaMapView.h; sourceTree = "<group>"; };
+		CAE5646F23538540003CBD3F /* ChinaMapPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChinaMapPath.h; sourceTree = "<group>"; };
+		CAE5647023538540003CBD3F /* ChinaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinaMapView.m; sourceTree = "<group>"; };
+		CAE5647123538540003CBD3F /* ChinaMapPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinaMapPath.m; sourceTree = "<group>"; };
+		CAE5647223538540003CBD3F /* CXProvincesMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProvincesMapView.h; sourceTree = "<group>"; };
+		CAE5647323538540003CBD3F /* CXProvincesMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProvincesMapView.m; sourceTree = "<group>"; };
 		DC5D89D4226B725700F16B77 /* SwiftLaunchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLaunchView.h; sourceTree = "<group>"; };
 		DC5D89D5226B725700F16B77 /* SwiftLaunchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLaunchView.m; sourceTree = "<group>"; };
 		DC70E7E32264E0D000BBC128 /* CXProvincesMapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXProvincesMapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,12 +40,8 @@
 		DC70E7F22264E0D100BBC128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC70E7F42264E0D100BBC128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC70E7F52264E0D100BBC128 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DCAE735622774AF9002C1B7F /* ChinaMapPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChinaMapPath.h; sourceTree = "<group>"; };
-		DCAE735722774AF9002C1B7F /* ChinaMapPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChinaMapPath.m; sourceTree = "<group>"; };
 		DCAE7359227756AF002C1B7F /* StyleKitName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKitName.m; sourceTree = "<group>"; };
 		DCAE735A227756AF002C1B7F /* StyleKitName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKitName.h; sourceTree = "<group>"; };
-		DCE8380A226E14DC0067AC93 /* CXProvincesMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXProvincesMapView.h; sourceTree = "<group>"; };
-		DCE8380B226E14DC0067AC93 /* CXProvincesMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXProvincesMapView.m; sourceTree = "<group>"; };
 		DCE8380D226E15310067AC93 /* SampleMapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleMapController.h; sourceTree = "<group>"; };
 		DCE8380E226E15310067AC93 /* SampleMapController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleMapController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +57,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CAE5646C23538540003CBD3F /* CXProvincesMapView */ = {
+			isa = PBXGroup;
+			children = (
+				CAE5646D23538540003CBD3F /* resourse */,
+				CAE5647223538540003CBD3F /* CXProvincesMapView.h */,
+				CAE5647323538540003CBD3F /* CXProvincesMapView.m */,
+			);
+			path = CXProvincesMapView;
+			sourceTree = "<group>";
+		};
+		CAE5646D23538540003CBD3F /* resourse */ = {
+			isa = PBXGroup;
+			children = (
+				CAE5646E23538540003CBD3F /* ChinaMapView.h */,
+				CAE5646F23538540003CBD3F /* ChinaMapPath.h */,
+				CAE5647023538540003CBD3F /* ChinaMapView.m */,
+				CAE5647123538540003CBD3F /* ChinaMapPath.m */,
+			);
+			path = resourse;
+			sourceTree = "<group>";
+		};
 		DC70E7DA2264E0D000BBC128 = {
 			isa = PBXGroup;
 			children = (
@@ -76,9 +97,11 @@
 		DC70E7E52264E0D000BBC128 /* CXProvincesMapView */ = {
 			isa = PBXGroup;
 			children = (
+				CAE5646C23538540003CBD3F /* CXProvincesMapView */,
+				DCAE735A227756AF002C1B7F /* StyleKitName.h */,
+				DCAE7359227756AF002C1B7F /* StyleKitName.m */,
 				DCE8380D226E15310067AC93 /* SampleMapController.h */,
 				DCE8380E226E15310067AC93 /* SampleMapController.m */,
-				DCE83809226E144A0067AC93 /* CXProvincesMapView */,
 				DC70E7E62264E0D000BBC128 /* AppDelegate.h */,
 				DC70E7E72264E0D000BBC128 /* AppDelegate.m */,
 				DC70E7E92264E0D000BBC128 /* ViewController.h */,
@@ -92,29 +115,6 @@
 				DC70E7F52264E0D100BBC128 /* main.m */,
 			);
 			path = CXProvincesMapView;
-			sourceTree = "<group>";
-		};
-		DCAE735522774AAD002C1B7F /* resourse */ = {
-			isa = PBXGroup;
-			children = (
-				DCAE735A227756AF002C1B7F /* StyleKitName.h */,
-				DCAE7359227756AF002C1B7F /* StyleKitName.m */,
-				DCAE735622774AF9002C1B7F /* ChinaMapPath.h */,
-				DCAE735722774AF9002C1B7F /* ChinaMapPath.m */,
-				DC553C442291AFC700D6B551 /* ChinaMapView.h */,
-				DC553C452291AFC700D6B551 /* ChinaMapView.m */,
-			);
-			path = resourse;
-			sourceTree = "<group>";
-		};
-		DCE83809226E144A0067AC93 /* CXProvincesMapView */ = {
-			isa = PBXGroup;
-			children = (
-				DCAE735522774AAD002C1B7F /* resourse */,
-				DCE8380A226E14DC0067AC93 /* CXProvincesMapView.h */,
-				DCE8380B226E14DC0067AC93 /* CXProvincesMapView.m */,
-			);
-			name = CXProvincesMapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,15 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCAE735822774AF9002C1B7F /* ChinaMapPath.m in Sources */,
-				DCE8380C226E14DC0067AC93 /* CXProvincesMapView.m in Sources */,
-				DC553C462291AFC700D6B551 /* ChinaMapView.m in Sources */,
 				DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */,
 				DCAE735B227756AF002C1B7F /* StyleKitName.m in Sources */,
 				DC70E7F62264E0D100BBC128 /* main.m in Sources */,
 				DC70E7E82264E0D000BBC128 /* AppDelegate.m in Sources */,
+				CAE5647623538540003CBD3F /* CXProvincesMapView.m in Sources */,
 				DCE8380F226E15310067AC93 /* SampleMapController.m in Sources */,
 				DC5D89D6226B725700F16B77 /* SwiftLaunchView.m in Sources */,
+				CAE5647423538540003CBD3F /* ChinaMapView.m in Sources */,
+				CAE5647523538540003CBD3F /* ChinaMapPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

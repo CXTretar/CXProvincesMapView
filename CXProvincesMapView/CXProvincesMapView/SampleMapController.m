@@ -24,7 +24,7 @@
     
     self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 400)];
     _chinaMapView.backgroundColor = [UIColor colorWithRed:230/255.0 green:1.0 blue:1.0 alpha:1.0];
-    _chinaMapView.maximumZoomScale = 2.0;
+    _chinaMapView.maximumZoomScale = 5.0;
     _chinaMapView.delegate = self;
 
     [self.view addSubview:_chinaMapView];
