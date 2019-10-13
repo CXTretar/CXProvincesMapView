@@ -9,11 +9,12 @@
 #import "ChinaMapView.h"
 #import "ChinaMapPath.h"
 
-#define MAP_SIZE_WIDTH 774
+#define MAP_SIZE_WIDTH  774
 #define MAP_SIZE_HEIGHT 569
-#define DEFAULT_FILL_COLOR   [UIColor colorWithRed: 0.8 green: 0.8 blue: 0.8 alpha: 1]
-#define DEFAULT_SELECTED_COLOR  [UIColor colorWithHexString:@"ea5c44"]
-#define DEFAULT_STROKE_COLOR [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+#define DEFAULT_FILL_COLOR              [UIColor colorWithRed: 0.8 green: 0.8 blue: 0.8 alpha: 1]
+#define DEFAULT_FILL_SELECTED_COLOR     [UIColor colorWithRed: 0.7 green: 0.2 blue: 0.2 alpha: 1.0]
+#define DEFAULT_STROKE_COLOR            [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+#define DEFAULT_STROKE_SELECTED_COLOR   [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
 
 @interface ChinaMapView ()
 
@@ -26,6 +27,7 @@
 @implementation ChinaMapView
 
 - (void)setFillColor:(UIColor *)fillColor {
+
     _pathColorArray = [NSMutableArray arrayWithCapacity: self.mapPath.pathArray.count];
     for (int i = 0; i < _mapPath.pathArray.count; i++) {
         [_pathColorArray addObject:fillColor];
@@ -43,7 +45,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.fillColor = DEFAULT_FILL_COLOR;
-        self.selectedColor = DEFAULT_FILL_COLOR;
+        self.fillSelectedColor = DEFAULT_FILL_SELECTED_COLOR;
         self.strokeColor = DEFAULT_STROKE_COLOR;
         self.selectedIndex = 0;
         UITapGestureRecognizer *click = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)];
@@ -54,10 +56,10 @@
 }
 
 - (void)click:(UITapGestureRecognizer *)sender {
+
     CGPoint point = [sender locationInView:sender.view];
-    
-    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target: self.bounds];
-    point = CGPointMake(point.x * MAP_SIZE_WIDTH / resizedFrame.size.width , point.y  * MAP_SIZE_HEIGHT /resizedFrame.size.height );
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:self.bounds];
+    point = CGPointMake((point.x - resizedFrame.origin.x) * MAP_SIZE_WIDTH / resizedFrame.size.width, (point.y - resizedFrame.origin.y) * MAP_SIZE_HEIGHT /resizedFrame.size.height );
     
     for (int i = 0; i < self.mapPath.pathArray.count; i++) {
         UIBezierPath *path = self.mapPath.pathArray[i];
@@ -66,7 +68,7 @@
             //清除之前选中的颜色，fill当前选中的颜色
             self.pathColorArray[_selectedIndex] = self.fillColor;
             _selectedIndex = i;
-            self.pathColorArray[i] = self.selectedColor;
+            self.pathColorArray[i] = self.fillSelectedColor;
             
             [self setNeedsDisplay];
             
@@ -87,9 +89,8 @@
     CGContextScaleCTM(context, resizedFrame.size.width / MAP_SIZE_WIDTH, resizedFrame.size.height / MAP_SIZE_HEIGHT);
     
     UIColor* strokeColor = self.strokeColor;
-    
+
     [self.mapPath.pathArray enumerateObjectsUsingBlock:^(UIBezierPath *path, NSUInteger idx, BOOL * _Nonnull stop) {
-        
         [self.pathColorArray[idx] setFill];
         [path fill];
         [strokeColor setStroke];
@@ -131,8 +132,8 @@
     CGRect result = CGRectStandardize(rect);
     result.size.width *= scales.width;
     result.size.height *= scales.height;
-    //    result.origin.x = target.origin.x + (target.size.width - result.size.width) / 2;
-    //    result.origin.y = target.origin.y + (target.size.height - result.size.height) / 2;
+    result.origin.x = target.origin.x + (target.size.width - result.size.width) / 2;
+    result.origin.y = target.origin.y + (target.size.height - result.size.height) / 2;
     return result;
 }
 

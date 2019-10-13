@@ -29,12 +29,21 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    
+    if (self.view.bounds.size.width > self.view.bounds.size.height) {
+        self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 320);
+    } else {
+        self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 320);
+    }
     self.chinaMapView.center = self.view.center;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-   
+    
 }
 
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
 
 @end

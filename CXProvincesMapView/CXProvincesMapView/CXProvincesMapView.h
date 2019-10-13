@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CXProvincesMapView : UIView
+@interface CXProvincesMapView : UIView {
+    NSString *_name;
+}
 
 @end
 

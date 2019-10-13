@@ -48,18 +48,21 @@
     
     [self addSubview:self.scrollview];
     self.chinaMapView = [ChinaMapView new];
-    self.chinaMapView.fillColor = [UIColor greenColor];
-    self.chinaMapView.selectedColor = [UIColor blueColor];
-//    self.chinaMapView.strokeColor = [UIColor ]
 
-    self.scrollview.frame = self.bounds;
-    self.chinaMapView.frame = self.scrollview.bounds;
+//    self.chinaMapView.backgroundColor = [UIColor redColor];
+//    self.chinaMapView.fillColor = [UIColor greenColor];
+//    self.chinaMapView.selectedColor = [UIColor blueColor];
+
+
     [self.scrollview addSubview:self.chinaMapView];
     
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    self.scrollview.frame = self.bounds;
+    self.chinaMapView.frame = self.scrollview.bounds;
     
 }
 // 告诉scrollview要缩放的是哪个子控件

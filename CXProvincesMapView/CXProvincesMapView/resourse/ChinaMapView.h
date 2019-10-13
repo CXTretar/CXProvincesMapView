@@ -11,7 +11,7 @@
 @interface ChinaMapView : UIView
 
 @property(nonatomic, strong) UIColor *fillColor;
-@property(nonatomic, strong) UIColor *selectedColor;
+@property(nonatomic, strong) UIColor *fillSelectedColor;
 @property(nonatomic, strong) UIColor *strokeColor;
 
 @end
