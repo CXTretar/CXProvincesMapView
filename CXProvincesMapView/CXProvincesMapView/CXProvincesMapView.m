@@ -23,10 +23,62 @@
    _chinaMapView.backgroundColor = backgroundColor;
 }
 
+- (void)setSelectedIndex:(NSInteger)selectedIndex {
+    _selectedIndex = selectedIndex;
+    _chinaMapView.selectedIndex = selectedIndex;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setFillColor:(UIColor *)fillColor {
+    _fillColor = fillColor;
+    _chinaMapView.fillColor = fillColor;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setFillSelectedColor:(UIColor *)fillSelectedColor {
+    _fillSelectedColor = fillSelectedColor;
+    _chinaMapView.fillSelectedColor = fillSelectedColor;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setStrokeColor:(UIColor *)strokeColor {
+    _strokeColor = strokeColor;
+    _chinaMapView.strokeColor = strokeColor;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setStrokeSelectedColor:(UIColor *)strokeSelectedColor {
+    _strokeColor = strokeSelectedColor;
+    _chinaMapView.strokeSelectedColor = strokeSelectedColor;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setTextColor:(UIColor *)textColor {
+    _textColor = textColor;
+    _chinaMapView.textColor = textColor;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setTextSelectedColor:(UIColor *)textSelectedColor {
+    _textSelectedColor = textSelectedColor;
+    _chinaMapView.textSelectedColor = textSelectedColor;
+    [_chinaMapView setNeedsDisplay];
+}
+
+- (void)setMaximumZoomScale:(CGFloat)maximumZoomScale {
+    _maximumZoomScale = maximumZoomScale;
+    self.scrollview.maximumZoomScale = maximumZoomScale;
+}
+
+- (void)setMinimumZoomScale:(CGFloat)minimumZoomScale {
+    _minimumZoomScale = minimumZoomScale;
+    self.scrollview.minimumZoomScale = minimumZoomScale;
+}
+
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
-        
     }
     
     return self;
@@ -35,7 +87,8 @@
 - (void)setupUI {
     
     self.scrollview = [UIScrollView new];
-   
+    _scrollview.showsVerticalScrollIndicator = NO;
+    _scrollview.showsHorizontalScrollIndicator = NO;
     //设置实现缩放
     //设置代理scrollview的代理对象
     _scrollview.delegate = self;
@@ -44,27 +97,25 @@
     //设置最小伸缩比例
     _scrollview.minimumZoomScale = 1.0;
     [_scrollview setZoomScale:1.0 animated:NO];
-
+    [self addSubview: _scrollview];
     
-    [self addSubview:self.scrollview];
     self.chinaMapView = [ChinaMapView new];
-
-//    self.chinaMapView.backgroundColor = [UIColor redColor];
-//    self.chinaMapView.fillColor = [UIColor greenColor];
-//    self.chinaMapView.selectedColor = [UIColor blueColor];
-
-
-    [self.scrollview addSubview:self.chinaMapView];
+    typeof(self) __weak weakSelf = self;
+    self.chinaMapView.block = ^(NSInteger index, NSString *name) {
+        weakSelf.selectedIndex = index;
+        [weakSelf selectProvinceAtIndex:index andName:name];
+    };
+    [_scrollview addSubview: _chinaMapView];
     
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
+- (void)setFrame:(CGRect)frame {
     self.scrollview.frame = self.bounds;
     self.chinaMapView.frame = self.scrollview.bounds;
-    
+    [_scrollview setZoomScale:1.0 animated:NO];
+    [super setFrame:frame];
 }
+
 // 告诉scrollview要缩放的是哪个子控件
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _chinaMapView;
@@ -79,6 +130,14 @@
     self.chinaMapView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
                                            scrollView.contentSize.height * 0.5 + offsetY);
     
+}
+
+#pragma mark - CXProvincesMapViewDelegate
+
+- (void)selectProvinceAtIndex:(NSInteger)index andName:(NSString *)name {
+    if ([self.delegate respondsToSelector:@selector(selectProvinceAtIndex:andName:)]) {
+        [self.delegate selectProvinceAtIndex:index andName:name];
+    }
 }
 
 

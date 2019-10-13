@@ -9,7 +9,7 @@
 #import "SampleMapController.h"
 #import "CXProvincesMapView.h"
 
-@interface SampleMapController ()
+@interface SampleMapController ()<CXProvincesMapViewDelegate>
 
 @property (nonatomic, strong) CXProvincesMapView *chinaMapView;
 
@@ -22,8 +22,11 @@
     self.title = @"SampleMapController";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 320)];
-    _chinaMapView.backgroundColor = [UIColor cyanColor];
+    self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 400)];
+    _chinaMapView.backgroundColor = [UIColor colorWithRed:230/255.0 green:1.0 blue:1.0 alpha:1.0];
+    _chinaMapView.maximumZoomScale = 2.0;
+    _chinaMapView.delegate = self;
+
     [self.view addSubview:_chinaMapView];
 }
 
@@ -31,15 +34,25 @@
     [super viewDidLayoutSubviews];
     
     if (self.view.bounds.size.width > self.view.bounds.size.height) {
-        self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 320);
+        self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 400);
     } else {
-        self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 320);
+        self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 400);
     }
     self.chinaMapView.center = self.view.center;
 }
 
+- (void)selectProvinceAtIndex:(NSInteger)index andName:(NSString *)name {
+    NSLog(@"Province - %ld - %@", index, name);
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+    _chinaMapView.selectedIndex = 10;
+    _chinaMapView.fillColor = [UIColor cyanColor];
+    _chinaMapView.fillSelectedColor = [UIColor greenColor];
+    _chinaMapView.strokeColor = [UIColor whiteColor];
+    _chinaMapView.strokeSelectedColor = [UIColor greenColor];
+    _chinaMapView.textColor = [UIColor blueColor];
+    _chinaMapView.textSelectedColor = [UIColor orangeColor];
 }
 
 - (void)dealloc {
