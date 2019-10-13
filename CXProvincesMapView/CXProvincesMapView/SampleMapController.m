@@ -53,6 +53,7 @@
     _chinaMapView.strokeSelectedColor = [UIColor greenColor];
     _chinaMapView.textColor = [UIColor blueColor];
     _chinaMapView.textSelectedColor = [UIColor orangeColor];
+    
 }
 
 - (void)dealloc {

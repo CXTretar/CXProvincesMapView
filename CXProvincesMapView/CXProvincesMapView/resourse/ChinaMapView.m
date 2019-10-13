@@ -38,9 +38,6 @@
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
-    _pathColorArray[_selectedIndex] = _fillSelectedColor;
-    _strokeColorArray[_selectedIndex] = _strokeSelectedColor;
-    _textColorArray[_selectedIndex] = _textSelectedColor;
     [self setNeedsDisplay];
 }
 
@@ -52,12 +49,28 @@
     _fillColor = fillColor;
 }
 
+- (void)setFillSelectedColor:(UIColor *)fillSelectedColor {
+    _fillSelectedColor = fillSelectedColor;
+    if (_selectedIndex) {
+        _pathColorArray[_selectedIndex] = _fillSelectedColor;
+    }
+}
+
 - (void)setStrokeColor:(UIColor *)strokeColor {
     _strokeColorArray = [NSMutableArray arrayWithCapacity: self.mapPath.pathArray.count];
     for (int i = 0; i < _mapPath.pathArray.count; i++) {
         [_strokeColorArray addObject:strokeColor];
     }
+    
+    
     _strokeColor = strokeColor;
+}
+
+- (void)setStrokeSelectedColor:(UIColor *)strokeSelectedColor {
+    _strokeSelectedColor = strokeSelectedColor;
+    if (_selectedIndex) {
+        _strokeColorArray[_selectedIndex] = _strokeSelectedColor;
+    }
 }
 
 - (void)setTextColor:(UIColor *)textColor {
@@ -66,6 +79,13 @@
         [_textColorArray addObject:textColor];
     }
     _textColor = textColor;
+}
+
+- (void)setTextSelectedColor:(UIColor *)textSelectedColor {
+    _textSelectedColor = textSelectedColor;
+    if (_selectedIndex) {
+        _textColorArray[_selectedIndex] = _textSelectedColor;
+    }
 }
 
 
