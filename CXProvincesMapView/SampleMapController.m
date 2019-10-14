@@ -32,7 +32,7 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    
+//
     if (self.view.bounds.size.width > self.view.bounds.size.height) {
         self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 400);
     } else {

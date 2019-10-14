@@ -106,7 +106,8 @@
         [weakSelf selectProvinceAtIndex:index andName:name];
     };
     [_scrollview addSubview: _chinaMapView];
-    
+    self.scrollview.frame = self.bounds;
+    self.chinaMapView.frame = self.scrollview.bounds;
 }
 
 - (void)setFrame:(CGRect)frame {
