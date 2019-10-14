@@ -42,7 +42,8 @@
 }
 
 - (void)selectProvinceAtIndex:(NSInteger)index andName:(NSString *)name {
-    NSLog(@"Province - %ld - %@", index, name);
+    NSLog(@"Province - %ld - %@", (long)index, name);
+    self.title = [NSString stringWithFormat:@"Province - %ld - %@", (long)index, name];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

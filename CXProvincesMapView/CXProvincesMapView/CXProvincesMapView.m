@@ -11,12 +11,29 @@
 
 @interface CXProvincesMapView()<UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIScrollView *scrollview;
-@property (nonatomic, strong) ChinaMapView *chinaMapView;
+@property(nonatomic, strong) UIScrollView *scrollview;
+@property(nonatomic, strong) ChinaMapView *chinaMapView;
+@property(nonatomic, strong) NSArray *textArray;
 
 @end
 
 @implementation CXProvincesMapView
+
+//  默认省份顺序
+- (NSArray *)textArray {
+    if (!_textArray) {
+        _textArray = @[
+            @"黑龙江省",  @"吉林省", @"辽宁省", @"北京市", @"天津市",
+            @"河北省", @"山东省", @"江苏省", @"浙江省", @"上海市",
+            @"福建省", @"台湾省", @"海南省", @"广东省", @"香港",
+            @"澳门", @"广西壮族自治区", @"云南省", @"江西省", @"湖南省",
+            @"贵州省", @"四川省", @"西藏自治区", @"新疆维吾尔自治区", @"青海省",
+            @"甘肃省", @"内蒙古自治区", @"宁夏回族自治区", @"陕西省", @"山西省",
+            @"河南省", @"安徽省", @"湖北省", @"重庆市",
+        ].copy;
+    }
+    return _textArray;
+}
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
     [super setBackgroundColor:backgroundColor];
@@ -26,7 +43,7 @@
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
     _chinaMapView.selectedIndex = selectedIndex;
-    [_chinaMapView setNeedsDisplay];
+    [self selectProvinceAtIndex:selectedIndex andName:self.textArray[selectedIndex]];
 }
 
 - (void)setFillColor:(UIColor *)fillColor {
@@ -85,7 +102,7 @@
 }
 
 - (void)setupUI {
-    
+   
     self.scrollview = [UIScrollView new];
     _scrollview.showsVerticalScrollIndicator = NO;
     _scrollview.showsHorizontalScrollIndicator = NO;

@@ -61,8 +61,6 @@
     for (int i = 0; i < _mapPath.pathArray.count; i++) {
         [_strokeColorArray addObject:strokeColor];
     }
-    
-    
     _strokeColor = strokeColor;
 }
 
