@@ -13,7 +13,7 @@
 @property(nonatomic, copy) NSArray *pathArray;
 @property(nonatomic, copy) NSMutableArray *textArray;
 @property(nonatomic, copy) NSArray *textRectArray;
-
+@property(nonatomic, copy) NSArray *pinPointArray;
 
 @end
 

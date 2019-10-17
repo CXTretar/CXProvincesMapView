@@ -39,6 +39,7 @@
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
     [self setNeedsDisplay];
+    [self showPinViewWithAnimation:_pinAnimation];
 }
 
 - (void)setFillColor:(UIColor *)fillColor {
@@ -51,7 +52,7 @@
 
 - (void)setFillSelectedColor:(UIColor *)fillSelectedColor {
     _fillSelectedColor = fillSelectedColor;
-    if (_selectedIndex) {
+    if (_selectedIndex >= 0) {
         _pathColorArray[_selectedIndex] = _fillSelectedColor;
     }
 }
@@ -66,7 +67,7 @@
 
 - (void)setStrokeSelectedColor:(UIColor *)strokeSelectedColor {
     _strokeSelectedColor = strokeSelectedColor;
-    if (_selectedIndex) {
+    if (_selectedIndex >= 0)  {
         _strokeColorArray[_selectedIndex] = _strokeSelectedColor;
     }
 }
@@ -81,21 +82,24 @@
 
 - (void)setTextSelectedColor:(UIColor *)textSelectedColor {
     _textSelectedColor = textSelectedColor;
-    if (_selectedIndex) {
+    if (_selectedIndex >= 0)  {
         _textColorArray[_selectedIndex] = _textSelectedColor;
     }
 }
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.selectedIndex = 0;
+        self.selectedIndex = -1;
         self.fillColor = DEFAULT_FILL_COLOR;
         self.fillSelectedColor = DEFAULT_FILL_SELECTED_COLOR;
         self.strokeColor = DEFAULT_STROKE_COLOR;
         self.strokeSelectedColor = DEFAULT_STROKE_SELECTED_COLOR;
         self.textColor = DEFAULT_TEXT_COLOR;
         self.textSelectedColor = DEFAULT_TEXT_SELECTED_COLOR;
-        
+        self.pinAnimation = YES;
+        self.pinView = [UIView new];
+        self.pinImage = [UIImageView new];
+        [self.pinView addSubview:self.pinImage];
         UITapGestureRecognizer *click = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)];
         [self addGestureRecognizer:click];
     }
@@ -106,34 +110,72 @@
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     [self setNeedsDisplay];
+    [self showPinViewWithAnimation:NO];
+    if (_selectedIndex < 0) {
+        CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:frame];
+        CGFloat width = 20 * resizedFrame.size.width / MAP_SIZE_WIDTH;
+        CGFloat height = 20 * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+        self.pinView.frame = CGRectMake(0,  0, width, height);
+    }
+    
+}
+
+- (void)showPinViewWithAnimation:(BOOL)isAnimation {
+    if (_selectedIndex < 0) return;
+    
+    CGPoint pinPoint = CGPointFromString(self.mapPath.pinPointArray[_selectedIndex]);
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:self.bounds];
+    CGFloat x = resizedFrame.origin.x + pinPoint.x  * resizedFrame.size.width / MAP_SIZE_WIDTH;
+    CGFloat y = resizedFrame.origin.y + pinPoint.y  * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+    CGFloat width = 20 * resizedFrame.size.width / MAP_SIZE_WIDTH;
+    CGFloat height = 20 * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+    
+    self.pinView.frame = CGRectMake(x,  y, width, height);
+    self.pinImage.frame = self.pinView.bounds;
+    [self addSubview:self.pinView];
+    
+    if (isAnimation) {
+        CGPoint center = self.pinView.center;
+        CGFloat change = 10 * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+        self.pinView.center = CGPointMake(center.x, center.y - change);
+        [UIView animateWithDuration:0.2 animations:^{
+            self.pinView.center = CGPointMake(center.x, center.y);
+        }];
+    }
 }
 
 
 - (void)click:(UITapGestureRecognizer *)sender {
     
     CGPoint point = [sender locationInView:sender.view];
+    
     CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:self.bounds];
-    point = CGPointMake((point.x - resizedFrame.origin.x) * MAP_SIZE_WIDTH / resizedFrame.size.width, (point.y - resizedFrame.origin.y) * MAP_SIZE_HEIGHT /resizedFrame.size.height );
+    point = CGPointMake((point.x - resizedFrame.origin.x) * MAP_SIZE_WIDTH / resizedFrame.size.width, (point.y - resizedFrame.origin.y) * MAP_SIZE_HEIGHT /resizedFrame.size.height);
     
     for (int i = 0; i < self.mapPath.pathArray.count; i++) {
         UIBezierPath *path = self.mapPath.pathArray[i];
         
         if ([path containsPoint:point]) {
+            
+            if (_selectedIndex == i) {
+                return;
+            }
             //清除之前选中的颜色，fill当前选中的颜色
-            self.pathColorArray[_selectedIndex] = self.fillColor;
-            self.strokeColorArray[_selectedIndex] = self.strokeColor;
-            self.textColorArray[_selectedIndex] = self.textColor;
-            _selectedIndex = i;
+            if (_selectedIndex >= 0) {
+                self.pathColorArray[_selectedIndex] = self.fillColor;
+                self.strokeColorArray[_selectedIndex] = self.strokeColor;
+                self.textColorArray[_selectedIndex] = self.textColor;
+            }
+            
+            self.selectedIndex = i;
             self.pathColorArray[i] = self.fillSelectedColor;
             self.strokeColorArray[i] = self.strokeSelectedColor;
             self.textColorArray[i] = self.textSelectedColor;
             [self setNeedsDisplay];
-            
+            [self showPinViewWithAnimation:_pinAnimation];
             if (self.block) {
-                
                 self.block(i, self.mapPath.textArray[i]);
             }
-            
             break;
         }
     }
@@ -156,6 +198,7 @@
         [self.strokeColorArray[idx] setStroke];
         path.lineWidth = 0.5;
         path.miterLimit = 4;
+        
         [path stroke];
         
     }];
@@ -174,7 +217,6 @@
         [textContent drawInRect: CGRectMake(CGRectGetMinX(textRect), CGRectGetMinY(textRect) + (textRect.size.height - textTextHeight) / 2, textRect.size.width, textTextHeight) withAttributes: textFontAttributes];
         CGContextRestoreGState(context);
     }
-    
 }
 
 - (CGRect)resizing:(CGRect)rect target:(CGRect)target {

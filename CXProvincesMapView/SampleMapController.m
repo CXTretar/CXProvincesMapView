@@ -22,17 +22,26 @@
     self.title = @"SampleMapController";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 400)];
+    self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 400)];
     _chinaMapView.backgroundColor = [UIColor colorWithRed:230/255.0 green:1.0 blue:1.0 alpha:1.0];
     _chinaMapView.maximumZoomScale = 5.0;
     _chinaMapView.delegate = self;
-
+    _chinaMapView.center = self.view.center;
+//    _chinaMapView.pinAnimation = NO;
+    // 直接设置图片
+//    _chinaMapView.pinImage = [UIImage imageNamed:@"pin"];
+    // 添加按钮点击
+    UIButton *pinButton = [[UIButton alloc]initWithFrame:_chinaMapView.pinView.bounds];
+    [pinButton setImage:[UIImage imageNamed:@"pin"] forState:UIControlStateNormal];
+    [pinButton addTarget:self action:@selector(pinTest) forControlEvents:UIControlEventTouchUpInside];
+    [_chinaMapView.pinView addSubview:pinButton];
+    
     [self.view addSubview:_chinaMapView];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-//
+    //
     if (self.view.bounds.size.width > self.view.bounds.size.height) {
         self.chinaMapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 400);
     } else {
@@ -47,7 +56,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    _chinaMapView.selectedIndex = 10;
+    _chinaMapView.selectedIndex = 0;
     _chinaMapView.fillColor = [UIColor cyanColor];
     _chinaMapView.fillSelectedColor = [UIColor greenColor];
     _chinaMapView.strokeColor = [UIColor whiteColor];
@@ -55,6 +64,10 @@
     _chinaMapView.textColor = [UIColor blueColor];
     _chinaMapView.textSelectedColor = [UIColor orangeColor];
     
+}
+
+- (void)pinTest {
+    NSLog(@"%s", __func__);
 }
 
 - (void)dealloc {

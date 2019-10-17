@@ -21,5 +21,9 @@ typedef void (^ChinaMapViewSelectBlock)(NSInteger index, NSString *name);
 @property(nonatomic, strong) UIColor *textColor;
 @property(nonatomic, strong) UIColor *textSelectedColor;
 
+@property(nonatomic, strong) UIView *pinView;
+@property(nonatomic, strong) UIImageView *pinImage;
+@property(nonatomic, assign) BOOL pinAnimation;
+
 @end
 

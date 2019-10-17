@@ -34,6 +34,15 @@
     }
     return _textArray;
 }
+- (void)setPinAnimation:(BOOL)pinAnimation {
+    _pinAnimation = pinAnimation;
+    self.chinaMapView.pinAnimation = pinAnimation;
+}
+
+- (void)setPinImage:(UIImage *)pinImage {
+    _pinImage = pinImage;
+    self.chinaMapView.pinImage.image = pinImage;
+}
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
     [super setBackgroundColor:backgroundColor];
@@ -103,7 +112,7 @@
 
 - (void)setupUI {
    
-    self.scrollview = [UIScrollView new];
+    self.scrollview = [[UIScrollView alloc] initWithFrame:self.bounds];
     _scrollview.showsVerticalScrollIndicator = NO;
     _scrollview.showsHorizontalScrollIndicator = NO;
     //设置实现缩放
@@ -116,15 +125,15 @@
     [_scrollview setZoomScale:1.0 animated:NO];
     [self addSubview: _scrollview];
     
-    self.chinaMapView = [ChinaMapView new];
+    self.chinaMapView = [[ChinaMapView alloc] init];
     typeof(self) __weak weakSelf = self;
     self.chinaMapView.block = ^(NSInteger index, NSString *name) {
         weakSelf.selectedIndex = index;
-        [weakSelf selectProvinceAtIndex:index andName:name];
     };
     [_scrollview addSubview: _chinaMapView];
-    self.scrollview.frame = self.bounds;
     self.chinaMapView.frame = self.scrollview.bounds;
+    self.pinImage = self.chinaMapView.pinImage.image;
+    self.pinView = self.chinaMapView.pinView;
 }
 
 - (void)setFrame:(CGRect)frame {

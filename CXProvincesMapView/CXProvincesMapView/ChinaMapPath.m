@@ -10,6 +10,55 @@
 
 @implementation ChinaMapPath
 
+- (NSArray *)pinPointArray {
+    if (!_pinPointArray) {
+        _pinPointArray = @[
+            NSStringFromCGPoint(CGPointMake(680, 105)),
+            NSStringFromCGPoint(CGPointMake(661, 175)),
+            NSStringFromCGPoint(CGPointMake(622, 195)),
+            NSStringFromCGPoint(CGPointMake(535, 230)),
+            NSStringFromCGPoint(CGPointMake(545, 250)),
+            
+            NSStringFromCGPoint(CGPointMake(519, 252)),
+            NSStringFromCGPoint(CGPointMake(549, 283)),
+            NSStringFromCGPoint(CGPointMake(576, 338)),
+            NSStringFromCGPoint(CGPointMake(574, 392)),
+            NSStringFromCGPoint(CGPointMake(596, 372)),
+            
+            NSStringFromCGPoint(CGPointMake(556, 435)),
+            NSStringFromCGPoint(CGPointMake(594, 465)),
+            NSStringFromCGPoint(CGPointMake(451, 533)),
+            NSStringFromCGPoint(CGPointMake(496, 469)),
+            NSStringFromCGPoint(CGPointMake(506, 496)),
+            
+            NSStringFromCGPoint(CGPointMake(490, 500)),
+            NSStringFromCGPoint(CGPointMake(443, 461)),
+            NSStringFromCGPoint(CGPointMake(345, 455)),
+            NSStringFromCGPoint(CGPointMake(523, 409)),
+            NSStringFromCGPoint(CGPointMake(473, 409)),
+            
+            NSStringFromCGPoint(CGPointMake(416, 426)),
+            NSStringFromCGPoint(CGPointMake(353, 368)),
+            NSStringFromCGPoint(CGPointMake(168, 350)),
+            NSStringFromCGPoint(CGPointMake(141, 200)),
+            NSStringFromCGPoint(CGPointMake(250, 291)),
+            
+            NSStringFromCGPoint(CGPointMake(353, 254)),
+            NSStringFromCGPoint(CGPointMake(448, 204)),
+            NSStringFromCGPoint(CGPointMake(406, 268)),
+            NSStringFromCGPoint(CGPointMake(440, 320)),
+            NSStringFromCGPoint(CGPointMake(482, 252)),
+            
+            NSStringFromCGPoint(CGPointMake(495, 318)),
+            NSStringFromCGPoint(CGPointMake(543, 355)),
+            NSStringFromCGPoint(CGPointMake(479, 362)),
+            NSStringFromCGPoint(CGPointMake(432, 375)),
+        ].copy;
+    };
+    
+    return _pinPointArray;
+}
+
 - (NSMutableArray *)textArray {
     if (!_textArray) {
         _textArray = @[

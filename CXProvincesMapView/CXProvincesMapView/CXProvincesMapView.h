@@ -30,6 +30,10 @@
 @property(nonatomic, assign) CGFloat minimumZoomScale;     // default is 1.0
 @property(nonatomic, assign) CGFloat maximumZoomScale;     // default is 2.0
 
+@property(nonatomic, strong) UIView *pinView;              // 图钉自定义视图
+@property(nonatomic, strong) UIImage *pinImage;            // 图钉图片
+@property(nonatomic, assign) BOOL pinAnimation;            // default is YES 图钉是否动画
+
 @property(nonatomic, weak) id <CXProvincesMapViewDelegate>delegate;
 
 @end
