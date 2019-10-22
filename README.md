@@ -1,7 +1,10 @@
 # CXProvincesMapView
 ![CXProvincesMapView](https://github.com/CXTretar/CXProvincesMapView/blob/master/gif/province.gif)
+
 # Update【更新】
 - 10.17 新增了图钉点击效果，可以添加自定义视图 
+- 10.22 增加了新的构造方法，提供外部传入 mapPath 参数， 修复了PinView的大小计算Bug，Demo增加了福建省的数据以及视图 
+
 # Install【安装】
 在Podfile文件中添加`pod 'CXProvincesMapView'`，并运行 `pod install`
 # Usage【使用】
@@ -54,6 +57,7 @@
     [super viewDidLoad];
     self.title = @"SampleMapController";
     self.view.backgroundColor = [UIColor whiteColor];
+    
     
     self.chinaMapView = [[CXProvincesMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 400)];
     _chinaMapView.backgroundColor = [UIColor colorWithRed:230/255.0 green:1.0 blue:1.0 alpha:1.0];
@@ -111,3 +115,29 @@
 
 
 ```
+* 自定义的mapPath (mapPath 类继承 ChinaMapPath.h)【示例】 
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    // 福建省市数据
+    FujianMapPath *mapPath = [[FujianMapPath alloc] init];
+    self.chinaMapView = [[CXProvincesMapView alloc]initWithMapPath:mapPath andMapSize:CGSizeMake(308, 340) andFrame:CGRectMake(0, 0, self.view.bounds.size.width, 400)];
+    _chinaMapView.backgroundColor = [UIColor colorWithRed:230/255.0 green:1.0 blue:1.0 alpha:1.0];
+    _chinaMapView.maximumZoomScale = 5.0;
+    _chinaMapView.center = self.view.center;
+    _chinaMapView.delegate = self;
+    //    _chinaMapView.pinAnimation = NO;
+    // 直接设置图片
+    //    _chinaMapView.pinImage = [UIImage imageNamed:@"pin"];
+    // 添加按钮点击
+    UIButton *pinButton = [[UIButton alloc]initWithFrame:_chinaMapView.pinView.bounds];
+    [pinButton setImage:[UIImage imageNamed:@"pin"] forState:UIControlStateNormal];
+    [pinButton addTarget:self action:@selector(pinTest) forControlEvents:UIControlEventTouchUpInside];
+    [_chinaMapView.pinView addSubview:pinButton];
+    [self.view addSubview:_chinaMapView];
+}
+
+```
+
