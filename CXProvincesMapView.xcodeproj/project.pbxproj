@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA694867235EC48A0088197C /* FujianMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CA694866235EC48A0088197C /* FujianMapPath.m */; };
+		CA69486A235EFCE10088197C /* Fujian.m in Sources */ = {isa = PBXBuildFile; fileRef = CA694869235EFCE10088197C /* Fujian.m */; };
+		CA69486D235EFF5F0088197C /* FujianMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA69486C235EFF5F0088197C /* FujianMapController.m */; };
 		CAE5647623538540003CBD3F /* CXProvincesMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE5647323538540003CBD3F /* CXProvincesMapView.m */; };
 		CAE5647B23538FBE003CBD3F /* ChinaMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE5647723538FBE003CBD3F /* ChinaMapPath.m */; };
 		CAE5647C23538FBE003CBD3F /* ChinaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE5647A23538FBE003CBD3F /* ChinaMapView.m */; };
@@ -22,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA694865235EC48A0088197C /* FujianMapPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FujianMapPath.h; sourceTree = "<group>"; };
+		CA694866235EC48A0088197C /* FujianMapPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FujianMapPath.m; sourceTree = "<group>"; };
+		CA694868235EFCE00088197C /* Fujian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fujian.h; sourceTree = "<group>"; };
+		CA694869235EFCE10088197C /* Fujian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fujian.m; sourceTree = "<group>"; };
+		CA69486B235EFF5F0088197C /* FujianMapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FujianMapController.h; sourceTree = "<group>"; };
+		CA69486C235EFF5F0088197C /* FujianMapController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FujianMapController.m; sourceTree = "<group>"; };
 		CAE5647223538540003CBD3F /* CXProvincesMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProvincesMapView.h; sourceTree = "<group>"; };
 		CAE5647323538540003CBD3F /* CXProvincesMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProvincesMapView.m; sourceTree = "<group>"; };
 		CAE5647723538FBE003CBD3F /* ChinaMapPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinaMapPath.m; sourceTree = "<group>"; };
@@ -92,8 +101,14 @@
 				CAE5646C23538540003CBD3F /* CXProvincesMapView */,
 				DCAE735A227756AF002C1B7F /* StyleKitName.h */,
 				DCAE7359227756AF002C1B7F /* StyleKitName.m */,
+				CA694868235EFCE00088197C /* Fujian.h */,
+				CA694869235EFCE10088197C /* Fujian.m */,
+				CA694865235EC48A0088197C /* FujianMapPath.h */,
+				CA694866235EC48A0088197C /* FujianMapPath.m */,
 				DCE8380D226E15310067AC93 /* SampleMapController.h */,
 				DCE8380E226E15310067AC93 /* SampleMapController.m */,
+				CA69486B235EFF5F0088197C /* FujianMapController.h */,
+				CA69486C235EFF5F0088197C /* FujianMapController.m */,
 				DC70E7E62264E0D000BBC128 /* AppDelegate.h */,
 				DC70E7E72264E0D000BBC128 /* AppDelegate.m */,
 				DC70E7E92264E0D000BBC128 /* ViewController.h */,
@@ -182,7 +197,10 @@
 				DC70E7EB2264E0D000BBC128 /* ViewController.m in Sources */,
 				DCAE735B227756AF002C1B7F /* StyleKitName.m in Sources */,
 				CAE5647C23538FBE003CBD3F /* ChinaMapView.m in Sources */,
+				CA69486D235EFF5F0088197C /* FujianMapController.m in Sources */,
+				CA69486A235EFCE10088197C /* Fujian.m in Sources */,
 				DC70E7F62264E0D100BBC128 /* main.m in Sources */,
+				CA694867235EC48A0088197C /* FujianMapPath.m in Sources */,
 				DC70E7E82264E0D000BBC128 /* AppDelegate.m in Sources */,
 				CAE5647623538540003CBD3F /* CXProvincesMapView.m in Sources */,
 				DCE8380F226E15310067AC93 /* SampleMapController.m in Sources */,

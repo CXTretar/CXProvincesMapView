@@ -8,8 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
-
-
+#import "ChinaMapPath.h"
 
 @protocol CXProvincesMapViewDelegate <NSObject>
 
@@ -18,6 +17,8 @@
 @end
 
 @interface CXProvincesMapView : UIView
+
+- (instancetype)initWithMapPath:(ChinaMapPath *)mapPath andMapSize:(CGSize)mapSize andFrame:(CGRect)frame;
 
 @property(nonatomic, assign) NSInteger selectedIndex;      // 选中省份的index
 @property(nonatomic, strong) UIColor *fillColor;           // 省份的背景颜色

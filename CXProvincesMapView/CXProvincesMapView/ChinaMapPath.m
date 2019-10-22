@@ -59,7 +59,7 @@
     return _pinPointArray;
 }
 
-- (NSMutableArray *)textArray {
+- (NSArray *)textArray {
     if (!_textArray) {
         _textArray = @[
             @"黑龙江省",  @"吉林省", @"辽宁省", @"北京市", @"天津市",
@@ -69,7 +69,7 @@
             @"贵州省", @"四川省", @"西藏自治区", @"新疆维吾尔自治区", @"青海省",
             @"甘肃省", @"内蒙古自治区", @"宁夏回族自治区", @"陕西省", @"山西省",
             @"河南省", @"安徽省", @"湖北省", @"重庆市",
-        ].mutableCopy;
+        ].copy;
     }
     return _textArray;
 }
@@ -118,7 +118,7 @@
             text21Rect, text22Rect, text23Rect, text24Rect, text25Rect,
             text26Rect, text27Rect, text28Rect, text29Rect, text30Rect,
             text31Rect, text32Rect, text33Rect, text34Rect,
-        ];
+        ].copy;
     }
     return  _textRectArray;
 }
@@ -13860,7 +13860,7 @@
             cN52Path, cN51Path, cN54Path, cN65Path, cN63Path,
             cN62Path, cN15Path, cN64Path, cN61Path, cN14Path,
             cN41Path, cN34Path, cN42Path, cN50Path,
-        ];
+        ].copy;
         
 //        @[
 //            @"黑龙江省",  @"吉林省", @"辽宁省", @"北京市", @"天津市",

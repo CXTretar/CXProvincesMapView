@@ -13,27 +13,11 @@
 
 @property(nonatomic, strong) UIScrollView *scrollview;
 @property(nonatomic, strong) ChinaMapView *chinaMapView;
-@property(nonatomic, strong) NSArray *textArray;
 
 @end
 
 @implementation CXProvincesMapView
 
-//  默认省份顺序
-- (NSArray *)textArray {
-    if (!_textArray) {
-        _textArray = @[
-            @"黑龙江省",  @"吉林省", @"辽宁省", @"北京市", @"天津市",
-            @"河北省", @"山东省", @"江苏省", @"浙江省", @"上海市",
-            @"福建省", @"台湾省", @"海南省", @"广东省", @"香港",
-            @"澳门", @"广西壮族自治区", @"云南省", @"江西省", @"湖南省",
-            @"贵州省", @"四川省", @"西藏自治区", @"新疆维吾尔自治区", @"青海省",
-            @"甘肃省", @"内蒙古自治区", @"宁夏回族自治区", @"陕西省", @"山西省",
-            @"河南省", @"安徽省", @"湖北省", @"重庆市",
-        ].copy;
-    }
-    return _textArray;
-}
 - (void)setPinAnimation:(BOOL)pinAnimation {
     _pinAnimation = pinAnimation;
     self.chinaMapView.pinAnimation = pinAnimation;
@@ -46,13 +30,13 @@
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
     [super setBackgroundColor:backgroundColor];
-   _chinaMapView.backgroundColor = backgroundColor;
+    _chinaMapView.backgroundColor = backgroundColor;
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
     _chinaMapView.selectedIndex = selectedIndex;
-    [self selectProvinceAtIndex:selectedIndex andName:self.textArray[selectedIndex]];
+    [self selectProvinceAtIndex:selectedIndex andName:self.chinaMapView.mapPath.textArray[selectedIndex]];
 }
 
 - (void)setFillColor:(UIColor *)fillColor {
@@ -102,16 +86,38 @@
 }
 
 
+- (instancetype)initWithMapPath:(ChinaMapPath *)mapPath andMapSize:(CGSize)mapSize andFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        // 检查 mapPath 格式
+        if (mapPath.textArray.count < mapPath.textRectArray.count) {
+            NSLog(@"textArray 与 textRectArray 数目不符");
+            NSMutableArray *tempArray = mapPath.textArray.mutableCopy;
+            for (int i = 0; i < mapPath.textRectArray.count - mapPath.textArray.count; i++) {
+                [tempArray addObject:@""];
+            }
+            mapPath.textArray = tempArray.copy;
+        }
+        [self setupUI];
+        self.chinaMapView.mapWidth = 308;
+        self.chinaMapView.mapHeight = 340;
+        self.chinaMapView.mapPath = mapPath;
+        self.chinaMapView.frame = self.scrollview.bounds;
+        
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
+        self.chinaMapView.frame = self.scrollview.bounds;
     }
     
     return self;
 }
 
 - (void)setupUI {
-   
+    
     self.scrollview = [[UIScrollView alloc] initWithFrame:self.bounds];
     _scrollview.showsVerticalScrollIndicator = NO;
     _scrollview.showsHorizontalScrollIndicator = NO;
@@ -131,9 +137,10 @@
         weakSelf.selectedIndex = index;
     };
     [_scrollview addSubview: _chinaMapView];
-    self.chinaMapView.frame = self.scrollview.bounds;
     self.pinImage = self.chinaMapView.pinImage.image;
     self.pinView = self.chinaMapView.pinView;
+    
+    
 }
 
 - (void)setFrame:(CGRect)frame {

@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChinaMapPath : NSObject
+@interface ChinaMapPath : NSObject {
+    NSArray *_pathArray;
+    NSArray *_textArray;
+    NSArray *_textRectArray;
+    NSArray *_pinPointArray;
+}
 
 @property(nonatomic, copy) NSArray *pathArray;
-@property(nonatomic, copy) NSMutableArray *textArray;
+@property(nonatomic, copy) NSArray *textArray;
 @property(nonatomic, copy) NSArray *textRectArray;
 @property(nonatomic, copy) NSArray *pinPointArray;
 

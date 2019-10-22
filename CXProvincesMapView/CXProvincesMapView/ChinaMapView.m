@@ -7,7 +7,6 @@
 //
 
 #import "ChinaMapView.h"
-#import "ChinaMapPath.h"
 
 #define MAP_SIZE_WIDTH  774
 #define MAP_SIZE_HEIGHT 569
@@ -16,11 +15,10 @@
 #define DEFAULT_STROKE_COLOR            [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1]
 #define DEFAULT_STROKE_SELECTED_COLOR   [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1]
 #define DEFAULT_TEXT_COLOR              [UIColor blackColor]
-#define DEFAULT_TEXT_SELECTED_COLOR     [UIColor whiteColor]
+#define DEFAULT_TEXT_SELECTED_COLOR     [UIColor redColor]
 
 @interface ChinaMapView ()
 
-@property(nonatomic, strong) ChinaMapPath *mapPath;
 @property(nonatomic, strong) NSMutableArray *pathColorArray;
 @property(nonatomic, strong) NSMutableArray *strokeColorArray;
 @property(nonatomic, strong) NSMutableArray *textColorArray;
@@ -29,11 +27,9 @@
 
 @implementation ChinaMapView
 
-- (ChinaMapPath *)mapPath {
-    if (!_mapPath) {
-        _mapPath = [[ChinaMapPath alloc] init];
-    }
-    return _mapPath;
+- (void)setMapPath:(ChinaMapPath *)mapPath {
+    _mapPath = mapPath;
+    [self setNeedsDisplay];
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
@@ -89,6 +85,9 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.mapPath = [[ChinaMapPath alloc] init];
+        self.mapWidth = MAP_SIZE_WIDTH;
+        self.mapHeight = MAP_SIZE_HEIGHT;
         self.selectedIndex = -1;
         self.fillColor = DEFAULT_FILL_COLOR;
         self.fillSelectedColor = DEFAULT_FILL_SELECTED_COLOR;
@@ -112,9 +111,9 @@
     [self setNeedsDisplay];
     [self showPinViewWithAnimation:NO];
     if (_selectedIndex < 0) {
-        CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:frame];
-        CGFloat width = 20 * resizedFrame.size.width / MAP_SIZE_WIDTH;
-        CGFloat height = 20 * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+        CGRect resizedFrame = [self resizing:CGRectMake(0, 0, _mapWidth, _mapHeight) target:frame];
+        CGFloat width = 20 * resizedFrame.size.width / _mapWidth;
+        CGFloat height = 20 * resizedFrame.size.height / _mapHeight;
         self.pinView.frame = CGRectMake(0,  0, width, height);
     }
     
@@ -124,11 +123,11 @@
     if (_selectedIndex < 0) return;
     
     CGPoint pinPoint = CGPointFromString(self.mapPath.pinPointArray[_selectedIndex]);
-    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:self.bounds];
-    CGFloat x = resizedFrame.origin.x + pinPoint.x  * resizedFrame.size.width / MAP_SIZE_WIDTH;
-    CGFloat y = resizedFrame.origin.y + pinPoint.y  * resizedFrame.size.height / MAP_SIZE_HEIGHT;
-    CGFloat width = 20 * resizedFrame.size.width / MAP_SIZE_WIDTH;
-    CGFloat height = 20 * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, _mapWidth, _mapHeight) target:self.bounds];
+    CGFloat x = resizedFrame.origin.x + pinPoint.x  * resizedFrame.size.width / _mapWidth;
+    CGFloat y = resizedFrame.origin.y + pinPoint.y  * resizedFrame.size.height / _mapHeight;
+    CGFloat width = 20 * resizedFrame.size.width / _mapWidth;
+    CGFloat height = 20 * resizedFrame.size.height / _mapHeight;
     
     self.pinView.frame = CGRectMake(x,  y, width, height);
     self.pinImage.frame = self.pinView.bounds;
@@ -136,7 +135,7 @@
     
     if (isAnimation) {
         CGPoint center = self.pinView.center;
-        CGFloat change = 10 * resizedFrame.size.height / MAP_SIZE_HEIGHT;
+        CGFloat change = 10 * resizedFrame.size.height / _mapHeight;
         self.pinView.center = CGPointMake(center.x, center.y - change);
         [UIView animateWithDuration:0.2 animations:^{
             self.pinView.center = CGPointMake(center.x, center.y);
@@ -149,17 +148,14 @@
     
     CGPoint point = [sender locationInView:sender.view];
     
-    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target:self.bounds];
-    point = CGPointMake((point.x - resizedFrame.origin.x) * MAP_SIZE_WIDTH / resizedFrame.size.width, (point.y - resizedFrame.origin.y) * MAP_SIZE_HEIGHT /resizedFrame.size.height);
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, _mapWidth, _mapHeight) target:self.bounds];
+    point = CGPointMake((point.x - resizedFrame.origin.x) * _mapWidth / resizedFrame.size.width, (point.y - resizedFrame.origin.y) * _mapHeight /resizedFrame.size.height);
     
     for (int i = 0; i < self.mapPath.pathArray.count; i++) {
         UIBezierPath *path = self.mapPath.pathArray[i];
         
         if ([path containsPoint:point]) {
             
-            if (_selectedIndex == i) {
-                return;
-            }
             //清除之前选中的颜色，fill当前选中的颜色
             if (_selectedIndex >= 0) {
                 self.pathColorArray[_selectedIndex] = self.fillColor;
@@ -171,7 +167,9 @@
             self.pathColorArray[i] = self.fillSelectedColor;
             self.strokeColorArray[i] = self.strokeSelectedColor;
             self.textColorArray[i] = self.textSelectedColor;
-            [self setNeedsDisplay];
+            if (_selectedIndex != i) {
+                [self setNeedsDisplay];
+            }
             [self showPinViewWithAnimation:_pinAnimation];
             if (self.block) {
                 self.block(i, self.mapPath.textArray[i]);
@@ -188,9 +186,9 @@
     
     //// Resize to Target Frame
     CGContextSaveGState(context);
-    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, MAP_SIZE_WIDTH, MAP_SIZE_HEIGHT) target: self.bounds];
+    CGRect resizedFrame = [self resizing:CGRectMake(0, 0, _mapWidth, _mapHeight) target: self.bounds];
     CGContextTranslateCTM(context, resizedFrame.origin.x, resizedFrame.origin.y);
-    CGContextScaleCTM(context, resizedFrame.size.width / MAP_SIZE_WIDTH, resizedFrame.size.height / MAP_SIZE_HEIGHT);
+    CGContextScaleCTM(context, resizedFrame.size.width / _mapWidth, resizedFrame.size.height / _mapHeight);
     
     [self.mapPath.pathArray enumerateObjectsUsingBlock:^(UIBezierPath *path, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.pathColorArray[idx] setFill];
