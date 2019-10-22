@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "CXProvincesMapView"
-spec.version      = "0.0.9"
+spec.version      = "0.1.0"
 spec.summary      = "CXProvincesMapView 是一个显示中国省份的地图控件"
 
 spec.description  = <<-DESC
