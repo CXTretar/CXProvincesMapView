@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    // 福建省市数据
     FujianMapPath *mapPath = [[FujianMapPath alloc] init];
     self.chinaMapView = [[CXProvincesMapView alloc]initWithMapPath:mapPath andMapSize:CGSizeMake(308, 340) andFrame:CGRectMake(0, 0, self.view.bounds.size.width, 400)];
     _chinaMapView.backgroundColor = [UIColor colorWithRed:230/255.0 green:1.0 blue:1.0 alpha:1.0];
