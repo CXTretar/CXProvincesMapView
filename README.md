@@ -27,10 +27,14 @@
 @property(nonatomic, strong) UIView *pinView;              // 图钉自定义视图
 @property(nonatomic, strong) UIImage *pinImage;            // 图钉图片
 @property(nonatomic, assign) BOOL pinAnimation;            // default is YES 图钉是否动画
-```
-* CXProvincesMapViewDelegate【点击事件回调】
-```
-- (void)selectProvinceAtIndex:(NSInteger)index andName:(NSString *)name;
+
+@property(nonatomic, weak) id <CXProvincesMapViewDelegate>delegate;
+
+/// 自定义的地图快捷创建方法
+/// @param mapPath svg 绘图数据
+/// @param mapSize svg 绘图尺寸
+/// @param frame   视图控件的frame
+- (instancetype)initWithMapPath:(ChinaMapPath *)mapPath andMapSize:(CGSize)mapSize andFrame:(CGRect)frame;
 ```
 * example【示例】 
 ```
