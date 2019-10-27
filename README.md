@@ -1,6 +1,8 @@
 # CXProvincesMapView
 ![CXProvincesMapView](https://github.com/CXTretar/CXProvincesMapView/blob/master/gif/province.gif)
 
+### 关于自定义 MapPath 的数据获取可以看下这里 [使用 PaintCode 绘制自定义的省份地图控件](https://cxtretar.github.io/2019/10/27/使用-PaintCode-绘制自定义的省份地图控件/)
+
 # Update【更新】
 - 10.17 新增了图钉点击效果，可以添加自定义视图 
 - 10.22 增加了新的构造方法，提供外部传入 mapPath 参数， 修复了PinView的大小计算Bug，Demo增加了福建省的数据以及视图 
